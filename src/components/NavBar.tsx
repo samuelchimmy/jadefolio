@@ -45,7 +45,7 @@ const NavBar = () => {
             <li key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-terminal-green transition-colors"
+                className="text-muted-foreground hover:text-terminal-green transition-colors animated-button"
               >
                 {item.label}
               </button>
@@ -53,7 +53,10 @@ const NavBar = () => {
           ))}
         </ul>
         
-        <button className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-colors">
+        <button 
+          onClick={() => scrollToSection('contact')}
+          className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-colors animated-button"
+        >
           Get in Touch
         </button>
       </nav>

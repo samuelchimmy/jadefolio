@@ -9,21 +9,34 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Load Twitter widget script
-    const script = document.createElement('script');
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-    
-    // Clean up on unmount
-    return () => {
-      try {
-        document.body.removeChild(script);
-      } catch (e) {
-        console.log("Twitter script already removed");
-      }
-    };
+    // More robust Twitter widget script loading
+    if (!window.twttr) {
+      const script = document.createElement('script');
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      script.charset = "utf-8";
+      
+      script.onload = () => {
+        // Once loaded, render all tweets
+        if (window.twttr) {
+          window.twttr.widgets.load();
+        }
+      };
+      
+      document.body.appendChild(script);
+      
+      // Clean up on unmount
+      return () => {
+        try {
+          document.body.removeChild(script);
+        } catch (e) {
+          console.log("Twitter script already removed");
+        }
+      };
+    } else {
+      // If script already exists, just load the widgets
+      window.twttr.widgets.load();
+    }
   }, []);
 
   return (

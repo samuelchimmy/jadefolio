@@ -36,17 +36,19 @@ const Contact = () => {
               </pre>
             </div>
             
-            <div className="space-y-4">
-              <p className="text-muted-foreground">
+            <div>
+              <p className="text-muted-foreground mb-6">
                 Ready to level up your content strategy and drive real growth?
                 Let's discuss how I can help you create viral content that converts.
               </p>
               
-              <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="grid grid-cols-2 gap-4">
                 <a 
                   href="mailto:EdozieSammy101@gmail.com" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="Email"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Mail size={20} />
                   <span className="text-sm">Email</span>
@@ -56,7 +58,7 @@ const Contact = () => {
                   href="https://discord.com/channels/@me/946013950246543404" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="Discord"
                 >
                   <MessageSquare size={20} />
@@ -67,7 +69,7 @@ const Contact = () => {
                   href="https://t.me/Rundysey" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="Telegram"
                 >
                   <Send size={20} />
@@ -78,7 +80,7 @@ const Contact = () => {
                   href="https://jadeofwallstreet.hashnode.dev/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="Blog"
                 >
                   <MessageSquare size={20} />
@@ -89,7 +91,7 @@ const Contact = () => {
                   href="https://github.com/samuelchimmy" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="GitHub"
                 >
                   <Github size={20} />
@@ -100,7 +102,7 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/samuelchimmy1" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
@@ -111,7 +113,7 @@ const Contact = () => {
                   href="https://link3.to/jadeofwallstreet" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 col-span-2"
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors animated-button p-2 transform hover:-translate-y-1 duration-300 col-span-2"
                   aria-label="Link3"
                 >
                   <Link size={20} />

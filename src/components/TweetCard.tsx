@@ -22,6 +22,7 @@ interface TweetCardProps {
 const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: TweetCardProps) => {
   const [visible, setVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const tweetDivRef = useRef<HTMLDivElement>(null);
   const [maxMetric, setMaxMetric] = useState(0);
   
   useEffect(() => {
@@ -54,27 +55,36 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
     };
   }, [metrics]);
 
-  // When component mounts, directly render the embedded tweet
+  // Improved tweet embedding
   useEffect(() => {
-    // Clear any existing tweet widgets
-    const tweetContainer = document.getElementById(`tweet-embed-${index}`);
-    if (tweetContainer) {
-      tweetContainer.innerHTML = '';
+    const createTweetEmbed = () => {
+      if (!tweetDivRef.current) return;
       
-      // Create tweet embed
-      const tweetEmbed = document.createElement('div');
-      tweetEmbed.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark"><a href="${tweetUrl}"></a></blockquote>`;
-      tweetContainer.appendChild(tweetEmbed);
+      // Clear any existing content
+      tweetDivRef.current.innerHTML = '';
       
-      // Load Twitter widget script
-      if (window.twttr) {
-        window.twttr.widgets.load(tweetContainer);
-      } else {
-        const script = document.createElement('script');
-        script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-        script.setAttribute('async', 'true');
-        document.body.appendChild(script);
-      }
+      // Create the iframe directly
+      const tweetId = tweetUrl.split('/').pop() || '';
+      const iframe = document.createElement('iframe');
+      
+      iframe.setAttribute('src', 
+        `https://platform.twitter.com/embed/index.html?dnt=false&embedId=twitter-widget-${index}&frame=false&hideCard=false&hideThread=false&id=${tweetId}&lang=en&theme=dark&widgetsVersion=ed20a2b%3A1601588405575`
+      );
+      iframe.setAttribute('width', '100%');
+      iframe.setAttribute('height', '400px');
+      iframe.setAttribute('frameBorder', '0');
+      iframe.setAttribute('scrolling', 'no');
+      iframe.style.borderRadius = '12px';
+      
+      tweetDivRef.current.appendChild(iframe);
+    };
+    
+    // Try to create the tweet embed
+    createTweetEmbed();
+    
+    // Also try the Twitter widgets approach as fallback
+    if (window.twttr) {
+      window.twttr.widgets.load(tweetDivRef.current);
     }
   }, [tweetUrl, index]);
   
@@ -99,8 +109,19 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tweet Embed */}
           <div className="tweet-card col-span-1">
-            <div id={`tweet-embed-${index}`} className="bg-card rounded-lg border border-terminal-green/20 h-[400px] flex items-center justify-center overflow-hidden">
-              {/* Tweet will be embedded here */}
+            <div 
+              ref={tweetDivRef} 
+              className="bg-card rounded-lg border border-terminal-green/20 h-[400px] flex items-center justify-center overflow-hidden"
+            >
+              <div className="text-muted-foreground text-sm">Loading tweet...</div>
+              <a 
+                href={tweetUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="absolute inset-0 opacity-0"
+              >
+                View tweet on Twitter
+              </a>
             </div>
           </div>
           

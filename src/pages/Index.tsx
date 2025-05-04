@@ -13,11 +13,16 @@ const Index = () => {
     const script = document.createElement('script');
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
+    script.charset = "utf-8";
     document.body.appendChild(script);
     
     // Clean up on unmount
     return () => {
-      document.body.removeChild(script);
+      try {
+        document.body.removeChild(script);
+      } catch (e) {
+        console.log("Twitter script already removed");
+      }
     };
   }, []);
 

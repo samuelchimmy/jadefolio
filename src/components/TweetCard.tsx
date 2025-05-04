@@ -53,23 +53,35 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
       observer.disconnect();
     };
   }, [metrics]);
+
+  // When component mounts, directly render the embedded tweet
+  useEffect(() => {
+    // Clear any existing tweet widgets
+    const tweetContainer = document.getElementById(`tweet-embed-${index}`);
+    if (tweetContainer) {
+      tweetContainer.innerHTML = '';
+      
+      // Create tweet embed
+      const tweetEmbed = document.createElement('div');
+      tweetEmbed.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark"><a href="${tweetUrl}"></a></blockquote>`;
+      tweetContainer.appendChild(tweetEmbed);
+      
+      // Load Twitter widget script
+      if (window.twttr) {
+        window.twttr.widgets.load(tweetContainer);
+      } else {
+        const script = document.createElement('script');
+        script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+        script.setAttribute('async', 'true');
+        document.body.appendChild(script);
+      }
+    }
+  }, [tweetUrl, index]);
   
   // Format metrics display
   const getPercentage = (value: string) => {
     const numValue = parseInt(value.replace(/[^0-9.]/g, ''));
     return !isNaN(numValue) && maxMetric > 0 ? (numValue / maxMetric) * 100 : 0;
-  };
-
-  // Extract twitter ID from URL
-  const getTweetId = () => {
-    try {
-      const url = new URL(tweetUrl);
-      const pathParts = url.pathname.split('/');
-      return pathParts[pathParts.length - 1].split('?')[0];
-    } catch (e) {
-      console.error("Invalid tweet URL", e);
-      return "";
-    }
   };
 
   return (
@@ -87,20 +99,8 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tweet Embed */}
           <div className="tweet-card col-span-1">
-            <div className="bg-card animate-pulse-glow rounded-lg border border-terminal-green/20 h-[400px] flex items-center justify-center overflow-hidden">
-              <blockquote 
-                className="twitter-tweet" 
-                data-conversation="none" 
-                data-theme="dark" 
-                data-lang="en"
-              >
-                <a href={tweetUrl}>Loading Tweet...</a>
-              </blockquote>
-              <script 
-                async 
-                src="https://platform.twitter.com/widgets.js" 
-                charSet="utf-8"
-              ></script>
+            <div id={`tweet-embed-${index}`} className="bg-card rounded-lg border border-terminal-green/20 h-[400px] flex items-center justify-center overflow-hidden">
+              {/* Tweet will be embedded here */}
             </div>
           </div>
           
@@ -154,5 +154,12 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
     </div>
   );
 };
+
+// Add global Twitter types
+declare global {
+  interface Window {
+    twttr?: any;
+  }
+}
 
 export default TweetCard;

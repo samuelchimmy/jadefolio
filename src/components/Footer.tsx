@@ -22,10 +22,10 @@ const Footer = () => {
             <div>
               <h4 className="text-sm font-semibold mb-4">Navigation</h4>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-sm text-muted-foreground hover:text-terminal-green">Home</a></li>
-                <li><a href="#about" className="text-sm text-muted-foreground hover:text-terminal-green">About</a></li>
-                <li><a href="#case-studies" className="text-sm text-muted-foreground hover:text-terminal-green">Case Studies</a></li>
-                <li><a href="#contact" className="text-sm text-muted-foreground hover:text-terminal-green">Contact</a></li>
+                <li><a href="#home" className="text-sm text-muted-foreground hover:text-terminal-green link-hover">Home</a></li>
+                <li><a href="#about" className="text-sm text-muted-foreground hover:text-terminal-green link-hover">About</a></li>
+                <li><a href="#case-studies" className="text-sm text-muted-foreground hover:text-terminal-green link-hover">Case Studies</a></li>
+                <li><a href="#contact" className="text-sm text-muted-foreground hover:text-terminal-green link-hover">Contact</a></li>
               </ul>
             </div>
             
@@ -35,7 +35,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="mailto:EdozieSammy101@gmail.com" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2 icon-hover"
                   >
                     <Mail size={16} /> Email
                   </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="https://jadeofwallstreet.hashnode.dev/" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2 icon-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -53,7 +53,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="https://github.com/samuelchimmy" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2 icon-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -63,7 +63,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="https://www.linkedin.com/in/samuelchimmy1" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2 icon-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

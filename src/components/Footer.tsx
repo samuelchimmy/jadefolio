@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold mb-2">
-              <span className="text-terminal-green">Metis</span>
-              <span className="text-white">Charter</span>
+              <span className="text-terminal-green">Jade</span>
+              <span className="text-white">ofWallstreet</span>
               <span className="text-terminal-green">_</span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -33,7 +33,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a 
-                    href="https://twitter.com/MetisCharter" 
+                    href="https://twitter.com/JadeofWallstreet" 
                     className="text-sm text-muted-foreground hover:text-terminal-green"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="mailto:contact@metischarter.com" 
+                    href="mailto:contact@jadeofwallstreet.com" 
                     className="text-sm text-muted-foreground hover:text-terminal-green"
                   >
                     Email
@@ -56,7 +56,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-6 border-t border-muted text-center">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} MetisCharter. All rights reserved.
+            &copy; {new Date().getFullYear()} JadeofWallstreet. All rights reserved.
           </p>
         </div>
       </div>

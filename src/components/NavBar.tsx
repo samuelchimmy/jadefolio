@@ -30,8 +30,8 @@ const NavBar = () => {
     >
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="text-xl font-bold">
-          <span className="text-terminal-green">Metis</span>
-          <span className="text-white">Charter</span>
+          <span className="text-terminal-green">Jade</span>
+          <span className="text-white">ofWallstreet</span>
           <span className="text-terminal-green">_</span>
         </div>
         

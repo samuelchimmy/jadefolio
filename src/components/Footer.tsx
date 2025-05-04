@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Github, Mail, Send, Link, Linkedin, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -33,20 +34,40 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a 
-                    href="https://twitter.com/JadeofWallstreet" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:EdozieSammy101@gmail.com" 
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
                   >
-                    Twitter/X
+                    <Mail size={16} /> Email
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="mailto:contact@jadeofwallstreet.com" 
-                    className="text-sm text-muted-foreground hover:text-terminal-green"
+                    href="https://jadeofwallstreet.hashnode.dev/" 
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Email
+                    <MessageSquare size={16} /> Blog
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://github.com/samuelchimmy" 
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={16} /> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://www.linkedin.com/in/samuelchimmy1" 
+                    className="text-sm text-muted-foreground hover:text-terminal-green flex items-center gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin size={16} /> LinkedIn
                   </a>
                 </li>
               </ul>

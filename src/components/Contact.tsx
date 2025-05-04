@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Github, Mail, Send, Link, Linkedin, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -20,7 +21,7 @@ const Contact = () => {
               <pre className="language-javascript">
                 {`const contactMe = async () => {
   const response = await sendMessage({
-    target: "MetisCharter",
+    target: "JadeofWallstreet",
     platform: "Twitter/X",
     subject: "Growth Strategy Inquiry",
     priority: "High"
@@ -41,26 +42,80 @@ const Contact = () => {
                 Let's discuss how I can help you create viral content that converts.
               </p>
               
-              <div className="flex items-center space-x-6">
+              <div className="flex flex-wrap items-center gap-4 mt-6">
                 <a 
-                  href="https://twitter.com/MetisCharter" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-terminal-green hover:text-terminal-blue transition-colors"
+                  href="mailto:EdozieSammy101@gmail.com" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="Email"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                  </svg>
+                  <Mail size={20} />
+                  <span className="text-sm">Email</span>
                 </a>
                 
                 <a 
-                  href="mailto:contact@metischarter.com" 
-                  className="text-terminal-green hover:text-terminal-blue transition-colors"
+                  href="https://discord.com/channels/@me/946013950246543404" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="Discord"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                  </svg>
+                  <MessageSquare size={20} />
+                  <span className="text-sm">Discord</span>
+                </a>
+                
+                <a 
+                  href="https://t.me/Rundysey" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="Telegram"
+                >
+                  <Send size={20} />
+                  <span className="text-sm">Telegram</span>
+                </a>
+                
+                <a 
+                  href="https://jadeofwallstreet.hashnode.dev/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="Blog"
+                >
+                  <MessageSquare size={20} />
+                  <span className="text-sm">Blog</span>
+                </a>
+                
+                <a 
+                  href="https://github.com/samuelchimmy" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github size={20} />
+                  <span className="text-sm">GitHub</span>
+                </a>
+                
+                <a 
+                  href="https://www.linkedin.com/in/samuelchimmy1" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                  <span className="text-sm">LinkedIn</span>
+                </a>
+                
+                <a 
+                  href="https://link3.to/jadeofwallstreet" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-colors"
+                  aria-label="Link3"
+                >
+                  <Link size={20} />
+                  <span className="text-sm">More Links</span>
                 </a>
               </div>
             </div>

@@ -11,12 +11,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center pt-20 px-6">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center px-6">
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 gap-12 items-center">
         <div className="animate-fade-in">
           <div className="mb-4">
             <div className="inline-block text-sm text-muted-foreground border border-terminal-green/30 px-3 py-1 rounded-full animate-pulse-glow">
-              Web3 Growth Strategist & Content Creator
+              Web3 Growth Strategist, Copywriter & Community Manager
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">

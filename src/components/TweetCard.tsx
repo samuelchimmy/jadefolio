@@ -21,6 +21,7 @@ interface TweetCardProps {
 
 const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: TweetCardProps) => {
   const [visible, setVisible] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const tweetDivRef = useRef<HTMLDivElement>(null);
   const [maxMetric, setMaxMetric] = useState(0);
@@ -84,7 +85,7 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
     
     // Also try the Twitter widgets approach as fallback
     if (window.twttr) {
-      window.twttr.widgets.load(tweetDivRef.current);
+      window.twttr.widgets.load();
     }
   }, [tweetUrl, index]);
   
@@ -94,12 +95,17 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
     return !isNaN(numValue) && maxMetric > 0 ? (numValue / maxMetric) * 100 : 0;
   };
 
+  const toggleExpanded = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div 
       ref={cardRef}
       className={cn(
         "border border-muted rounded-lg overflow-hidden mb-20 transition-all duration-700",
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20",
+        expanded ? "max-h-full" : "max-h-[500px]"
       )}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
@@ -171,6 +177,17 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
             </div>
           </div>
         </div>
+        
+        {!expanded && (
+          <div className="flex justify-center mt-6">
+            <button 
+              onClick={toggleExpanded}
+              className="px-4 py-2 rounded-md bg-transparent border border-terminal-green/50 text-terminal-green text-sm transition-all duration-300 hover:bg-terminal-green/10"
+            >
+              Show More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -179,7 +196,11 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
 // Add global Twitter types
 declare global {
   interface Window {
-    twttr?: any;
+    twttr?: {
+      widgets: {
+        load: (element?: HTMLElement | null) => void;
+      };
+    };
   }
 }
 

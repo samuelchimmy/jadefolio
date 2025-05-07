@@ -80,7 +80,7 @@ const Skills = () => {
           
           <SkillCard 
             title="Copywriting & Scripting" 
-            description="Writing compelling copy for websites, whitepapers, pitchdecks, and product launches."
+            description="Writing compelling copy for websites, whitepapers, grant proposals, pitchdecks, and product launches."
             icon={MessageSquare}
             delay={700}
           />
@@ -91,25 +91,6 @@ const Skills = () => {
             icon={Zap}
             delay={800}
           />
-        </div>
-        
-        <div className="mt-12 terminal-container animate-fade-in p-8">
-          <h3 className="text-xl font-bold mb-4 text-terminal-green">Tools & Platforms</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {[
-              "Twitter/X", "Farcaster", "Discord", "Telegram", 
-              "Notion", "Markdown", "Substack", "Hashnode",
-              "GitHub", "Figma", "Canva", "Dune Analytics",
-              "DeepDAO", "Guild.xyz", "Dework", "Mirror.xyz"
-            ].map((tool, i) => (
-              <div 
-                key={i} 
-                className="px-4 py-2 border border-terminal-green/20 rounded-md bg-muted/30 text-center hover:border-terminal-green/50 hover:bg-muted/50 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                {tool}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

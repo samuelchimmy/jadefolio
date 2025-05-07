@@ -83,9 +83,9 @@ const Experience = () => {
           />
           
           <ExperienceCard 
-            role="Community Manager & Content Lead" 
-            company="MetisDAO" 
-            duration="2022 - 2023"
+            role="Content Writer & Community Administrator" 
+            company="Metis.io" 
+            duration="05/2023 - 09/2023"
             description="Managed community growth and educational content for an Ethereum L2 scaling solution, focusing on developer adoption and technical explainers."
             achievements={[
               "Created developer-focused content that drove a 3x increase in GitHub contributions",
@@ -97,9 +97,9 @@ const Experience = () => {
           />
           
           <ExperienceCard 
-            role="Content Strategist & Technical Writer" 
-            company="Koris Network" 
-            duration="2021 - 2022"
+            role="Copywriter" 
+            company="Koris.io" 
+            duration="11/2024 - 02/2025"
             description="Developed technical content strategy for a cross-chain interoperability protocol, creating educational materials and growth-focused campaigns."
             achievements={[
               "Co-authored technical whitepaper that helped secure $1.2M in early funding",

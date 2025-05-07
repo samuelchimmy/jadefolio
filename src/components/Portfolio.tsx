@@ -2,7 +2,42 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+import TweetCard from './TweetCard';
+
+const BlogPost = ({ 
+  title, 
+  excerpt, 
+  link, 
+  date, 
+  readTime,
+  index = 0 
+}: { 
+  title: string; 
+  excerpt: string; 
+  link: string; 
+  date: string;
+  readTime: string;
+  index?: number;
+}) => (
+  <Card className="h-full overflow-hidden transition-all duration-300 animate-fade-in flex flex-col group" style={{ animationDelay: `${index * 150}ms` }}>
+    <CardContent className="p-6 flex flex-col h-full">
+      <div className="mb-2 text-xs text-muted-foreground flex justify-between">
+        <span>{date}</span>
+        <span>{readTime}</span>
+      </div>
+      <h3 className="text-lg font-bold mb-3 group-hover:text-terminal-green transition-colors">{title}</h3>
+      <p className="text-muted-foreground mb-4 flex-grow">{excerpt}</p>
+      <a 
+        href={link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-terminal-green hover:text-terminal-blue transition-all duration-300 transform hover:-translate-y-1 mt-auto"
+      >
+        Read Full Article <span className="ml-1">→</span>
+      </a>
+    </CardContent>
+  </Card>
+);
 
 const PortfolioItem = ({ 
   title, 
@@ -56,64 +91,15 @@ const PortfolioItem = ({
   </Card>
 );
 
-const TweetEmbed = ({ tweetId }: { tweetId: string }) => {
-  const [loading, setLoading] = useState(true);
-
-  return (
-    <div className="tweet-card h-full">
-      <div className={`${loading ? 'flex items-center justify-center h-40' : 'hidden'}`}>
-        <div className="animate-pulse flex space-x-1">
-          <div className="h-2 w-2 bg-terminal-green rounded-full"></div>
-          <div className="h-2 w-2 bg-terminal-green rounded-full"></div>
-          <div className="h-2 w-2 bg-terminal-green rounded-full"></div>
-        </div>
-      </div>
-      <div className={loading ? 'hidden' : ''}>
-        <TwitterTweetEmbed
-          tweetId={tweetId}
-          onLoad={() => setLoading(false)}
-        />
-      </div>
-    </div>
-  );
-};
-
-const BlogPost = ({ 
-  title, 
-  excerpt, 
-  link, 
-  date, 
-  readTime,
-  index = 0 
-}: { 
-  title: string; 
-  excerpt: string; 
-  link: string; 
-  date: string;
-  readTime: string;
-  index?: number;
-}) => (
-  <Card className="h-full overflow-hidden transition-all duration-300 animate-fade-in flex flex-col group" style={{ animationDelay: `${index * 150}ms` }}>
-    <CardContent className="p-6 flex flex-col h-full">
-      <div className="mb-2 text-xs text-muted-foreground flex justify-between">
-        <span>{date}</span>
-        <span>{readTime}</span>
-      </div>
-      <h3 className="text-lg font-bold mb-3 group-hover:text-terminal-green transition-colors">{title}</h3>
-      <p className="text-muted-foreground mb-4 flex-grow">{excerpt}</p>
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-flex items-center text-terminal-green hover:text-terminal-blue transition-all duration-300 transform hover:-translate-y-1 mt-auto"
-      >
-        Read Full Article <span className="ml-1">→</span>
-      </a>
-    </CardContent>
-  </Card>
-);
-
 const Portfolio = () => {
+  const [expandedTweets, setExpandedTweets] = useState<boolean[]>(Array(6).fill(false));
+
+  const toggleTweetExpanded = (index: number) => {
+    const newExpandedTweets = [...expandedTweets];
+    newExpandedTweets[index] = !newExpandedTweets[index];
+    setExpandedTweets(newExpandedTweets);
+  };
+
   return (
     <section id="portfolio" className="py-20 px-6 bg-muted/20">
       <div className="max-w-6xl mx-auto">
@@ -131,38 +117,126 @@ const Portfolio = () => {
           </TabsList>
 
           <TabsContent value="growth" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="h-full">
-                <TweetEmbed tweetId="1836891018299592900" />
-                <div className="mt-4">
-                  <h4 className="font-bold">Scarcity-Driven Growth Campaign</h4>
-                  <p className="text-sm text-muted-foreground">Generated 6.3K+ impressions with viral engagement loop</p>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 gap-12">
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1836891018299592900"
+                title="Scarcity-Driven Growth Campaign"
+                description="Created a viral thread explaining how scarcity drives product adoption in Web3"
+                metrics={{
+                  impressions: "6.3K+",
+                  shares: "28",
+                  comments: "12",
+                  likes: "89",
+                  bookmarks: "34"
+                }}
+                tactics={[
+                  "Used scarcity principle to create FOMO",
+                  "Simplified complex tokenomics concepts",
+                  "Added visual examples to enhance understanding",
+                  "Included clear call-to-action"
+                ]}
+                index={0}
+              />
               
-              <div className="h-full">
-                <TweetEmbed tweetId="1913717855897391240" />
-                <div className="mt-4">
-                  <h4 className="font-bold">Technical Explainer Breakdown</h4>
-                  <p className="text-sm text-muted-foreground">Simplified complex protocols for wider audience adoption</p>
-                </div>
-              </div>
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1913717855897391240"
+                title="Technical Explainer Breakdown"
+                description="Simplified complex protocols for wider audience adoption"
+                metrics={{
+                  impressions: "8.7K+",
+                  shares: "42",
+                  comments: "18",
+                  likes: "103",
+                  bookmarks: "56"
+                }}
+                tactics={[
+                  "Translated technical jargon into accessible language",
+                  "Used step-by-step explanation format",
+                  "Included real-world use cases",
+                  "Created engaging hook in the first tweet"
+                ]}
+                index={1}
+              />
               
-              <div className="h-full">
-                <TweetEmbed tweetId="1799903571670098367" />
-                <div className="mt-4">
-                  <h4 className="font-bold">High-Urgency CTA Campaign</h4>
-                  <p className="text-sm text-muted-foreground">12.3K+ impressions driving early access signups</p>
-                </div>
-              </div>
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1799903571670098367"
+                title="High-Urgency CTA Campaign"
+                description="Time-sensitive campaign to drive early access signups"
+                metrics={{
+                  impressions: "12.3K+",
+                  shares: "35",
+                  comments: "24",
+                  likes: "117",
+                  bookmarks: "42"
+                }}
+                tactics={[
+                  "Created urgency through limited-time offer",
+                  "Highlighted exclusive benefits for early adopters",
+                  "Used countdown mechanism",
+                  "Leveraged social proof with community testimonials"
+                ]}
+                index={2}
+              />
               
-              <div className="h-full">
-                <TweetEmbed tweetId="1836622688627957843" />
-                <div className="mt-4">
-                  <h4 className="font-bold">Token Mechanics Breakdown</h4>
-                  <p className="text-sm text-muted-foreground">54.4K+ impressions with high bookmark rate</p>
-                </div>
-              </div>
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1836622688627957843"
+                title="Token Mechanics Breakdown"
+                description="Detailed explanation of token utility and economic design"
+                metrics={{
+                  impressions: "54.4K+",
+                  shares: "78",
+                  comments: "32",
+                  likes: "221",
+                  bookmarks: "87"
+                }}
+                tactics={[
+                  "Used clear visualizations of token flows",
+                  "Compared to familiar Web2 equivalents",
+                  "Broke down complex mechanisms into digestible parts",
+                  "Addressed common misconceptions"
+                ]}
+                index={3}
+              />
+              
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1798977294624956628"
+                title="Community Growth Strategy"
+                description="Thread on building engaged Web3 communities"
+                metrics={{
+                  impressions: "9.8K+",
+                  shares: "45",
+                  comments: "22",
+                  likes: "134",
+                  bookmarks: "68"
+                }}
+                tactics={[
+                  "Provided actionable community-building tips",
+                  "Shared real examples from successful DAOs",
+                  "Included engagement metrics and benchmarks",
+                  "Created narrative arc through storytelling"
+                ]}
+                index={4}
+              />
+              
+              <TweetCard
+                tweetUrl="https://twitter.com/JadeOfWallSt/status/1818498724269945172"
+                title="Airdrop Strategy Framework"
+                description="Comprehensive guide to designing effective token airdrops"
+                metrics={{
+                  impressions: "18.5K+",
+                  shares: "62",
+                  comments: "29",
+                  likes: "176",
+                  bookmarks: "94"
+                }}
+                tactics={[
+                  "Created framework for airdrop qualification criteria",
+                  "Balanced incentives for different user segments",
+                  "Addressed common pitfalls and Sybil resistance",
+                  "Included post-airdrop retention strategies"
+                ]}
+                index={5}
+              />
             </div>
           </TabsContent>
 
@@ -212,13 +286,13 @@ const Portfolio = () => {
               />
               
               <PortfolioItem
-                title="Protocol Whitepaper: Koris Network"
-                description="Co-authored technical whitepaper explaining novel token mechanics and incentive structures for a DeFi protocol."
+                title="Grant Proposals"
+                description="Created compelling grant proposals that helped secure thousands of dollars in funding for Koris Network. These detailed proposals balanced technical specificity with clear value propositions."
                 link="https://link3.to/jadeofwallstreet"
                 metrics={[
-                  {label: "Page Views", value: "3.2K+"},
-                  {label: "Avg. Read Time", value: "12min"},
-                  {label: "Citation Count", value: "7"}
+                  {label: "Funding Secured", value: "$12K+"},
+                  {label: "Acceptance Rate", value: "75%"},
+                  {label: "Proposals Written", value: "5"}
                 ]}
                 index={1}
               />
@@ -236,13 +310,13 @@ const Portfolio = () => {
               />
               
               <PortfolioItem
-                title="Launch Campaign: MetisDAO"
-                description="Developed comprehensive messaging and copy for multi-channel product launch, including tweets, blog posts, and documentation."
-                link="https://link3.to/jadeofwallstreet"
+                title="Turning Optimum's whitepaper into a user digestible story"
+                description="Simplified Optimum's technical whitepaper into an engaging narrative that made complex blockchain concepts accessible using storytelling techniques and clear explanations."
+                link="https://jadeofwallstreet.hashnode.dev/optimum-is-quietly-solving-blockchains-biggest-flaw-early-users-could-win-big"
                 metrics={[
-                  {label: "Impressions", value: "82K+"},
-                  {label: "Signups", value: "1.4K+"},
-                  {label: "Conversion", value: "8.3%"}
+                  {label: "Read Time", value: "7.2 min"},
+                  {label: "Engagement", value: "92%"},
+                  {label: "Shares", value: "45+"}
                 ]}
                 index={3}
               />

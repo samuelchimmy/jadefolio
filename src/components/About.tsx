@@ -37,7 +37,7 @@ const TimelineItem = ({
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-10 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="section-heading section-title text-center mb-16">About My Journey</h2>
         

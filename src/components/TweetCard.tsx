@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -63,8 +64,13 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
       // Clear any existing content
       tweetDivRef.current.innerHTML = '';
       
+      // Extract tweet ID from URL - handling both twitter.com and x.com URLs
+      const urlParts = tweetUrl.split('/');
+      const tweetId = urlParts[urlParts.length - 1].split('?')[0];
+      
+      if (!tweetId) return;
+      
       // Create the iframe directly
-      const tweetId = tweetUrl.split('/').pop() || '';
       const iframe = document.createElement('iframe');
       
       iframe.setAttribute('src', 

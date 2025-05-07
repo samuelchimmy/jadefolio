@@ -119,121 +119,127 @@ const Portfolio = () => {
           <TabsContent value="growth" className="space-y-8">
             <div className="grid grid-cols-1 gap-12">
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1836891018299592900"
+                tweetUrl="https://x.com/MetisCharter/status/1836891018299592900"
                 title="Scarcity-Driven Growth Campaign"
-                description="Created a viral thread explaining how scarcity drives product adoption in Web3"
+                description="This tweet was part of a scarcity-driven growth campaign to generate buzz for an exclusive beta access opportunity tied to @BlurCrypto. It leveraged urgency, social proof, and gated access to drive viral engagement."
                 metrics={{
                   impressions: "6.3K+",
-                  shares: "28",
-                  comments: "12",
+                  shares: "35",
+                  comments: "83",
                   likes: "89",
-                  bookmarks: "34"
+                  bookmarks: "8"
                 }}
                 tactics={[
-                  "Used scarcity principle to create FOMO",
-                  "Simplified complex tokenomics concepts",
-                  "Added visual examples to enhance understanding",
-                  "Included clear call-to-action"
+                  "Applied a viral loop strategy using a like + repost + comment call-to-action",
+                  "Crafted a curiosity-based hook",
+                  "Positioned the offer as elite and time-sensitive",
+                  "Attracted high-intent participants and organic buzz",
+                  "Pushed demand beyond the supply cap - key for alpha-centric products"
                 ]}
                 index={0}
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1913717855897391240"
+                tweetUrl="https://x.com/MetisCharter/status/1913717855897391240"
                 title="Technical Explainer Breakdown"
-                description="Simplified complex protocols for wider audience adoption"
+                description="This was a simplified explainer article on @get_optimum's tech stack — turning complex topics like RLNC into digestible, engaging content. The goal was to educate and activate early participants in their ecosystem."
                 metrics={{
-                  impressions: "8.7K+",
-                  shares: "42",
-                  comments: "18",
-                  likes: "103",
-                  bookmarks: "56"
+                  impressions: "1.2K+",
+                  shares: "11+",
+                  comments: "6",
+                  likes: "25+",
+                  bookmarks: "15"
                 }}
                 tactics={[
-                  "Translated technical jargon into accessible language",
-                  "Used step-by-step explanation format",
-                  "Included real-world use cases",
-                  "Created engaging hook in the first tweet"
+                  "Used humor, simplified analogies, and bold positioning",
+                  "Balanced meme-level accessibility with genuine alpha",
+                  "Positioned protocol as early-farmable",
+                  "Elevated project's visibility and credibility within crypto circles",
+                  "Set the tone for grassroots GTM momentum"
                 ]}
                 index={1}
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1799903571670098367"
+                tweetUrl="https://x.com/MetisCharter/status/1799903571670098367"
                 title="High-Urgency CTA Campaign"
-                description="Time-sensitive campaign to drive early access signups"
+                description="This tweet was a high-urgency, viral-style CTA targeting early access to a VC-backed project beta. The aim was to spark rapid user engagement and onboard early testers while creating buzz within the alpha-hunting community."
                 metrics={{
                   impressions: "12.3K+",
-                  shares: "35",
-                  comments: "24",
-                  likes: "117",
-                  bookmarks: "42"
+                  shares: "47+",
+                  comments: "120+",
+                  likes: "66",
+                  bookmarks: "10"
                 }}
                 tactics={[
-                  "Created urgency through limited-time offer",
-                  "Highlighted exclusive benefits for early adopters",
-                  "Used countdown mechanism",
-                  "Leveraged social proof with community testimonials"
+                  "Engineered sense of urgency and exclusivity",
+                  "Used powerful language ('undiluted Alpha', 'FCFS', 'well-funded')",
+                  "Triggered viral loop via simple social engagement steps",
+                  "Funneled qualified, fast-acting users to project's beta",
+                  "Provided early traction from engaged retail participants"
                 ]}
                 index={2}
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1836622688627957843"
+                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843"
                 title="Token Mechanics Breakdown"
-                description="Detailed explanation of token utility and economic design"
+                description="This tweet broke down a complex redistribution formula for $ZRO token holders in a clear, actionable way. It helped users estimate how much extra they could claim from unclaimed token reserves — turning confusion into clarity at a key moment post-airdrop."
                 metrics={{
                   impressions: "54.4K+",
-                  shares: "78",
-                  comments: "32",
-                  likes: "221",
-                  bookmarks: "87"
+                  shares: "21+",
+                  comments: "38",
+                  likes: "232",
+                  bookmarks: "62"
                 }}
                 tactics={[
-                  "Used clear visualizations of token flows",
-                  "Compared to familiar Web2 equivalents",
-                  "Broke down complex mechanisms into digestible parts",
-                  "Addressed common misconceptions"
+                  "Simplified onchain math into a plug-and-play format with examples",
+                  "Made complex formulas easy for average users to apply",
+                  "Positioned as go-to voice for timely, accurate alpha",
+                  "Boosted user confidence during critical post-airdrop window",
+                  "Drove protocol engagement through clarity"
                 ]}
                 index={3}
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1798977294624956628"
+                tweetUrl="https://twitter.com/MetisCharter/status/1672441214159085568"
                 title="Community Growth Strategy"
-                description="Thread on building engaged Web3 communities"
+                description="A transparent, performance-based breakdown of crypto earnings, detailing successful airdrop farming and lessons learned. It combined storytelling with value signals to boost credibility and engagement."
                 metrics={{
-                  impressions: "9.8K+",
-                  shares: "45",
-                  comments: "22",
-                  likes: "134",
-                  bookmarks: "68"
+                  impressions: "71.8K+",
+                  shares: "26+",
+                  comments: "47",
+                  likes: "431",
+                  bookmarks: "62"
                 }}
                 tactics={[
-                  "Provided actionable community-building tips",
-                  "Shared real examples from successful DAOs",
-                  "Included engagement metrics and benchmarks",
-                  "Created narrative arc through storytelling"
+                  "Used candid, relatable tone to humanize high-stakes onchain hustling",
+                  "Created highly bookmarkable breakdown format",
+                  "Built trust through honesty about wins, losses, and lessons",
+                  "Drove massive organic reach through authenticity",
+                  "Positioned as credible voice in alpha-sharing and airdrop farming niche"
                 ]}
                 index={4}
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/JadeOfWallSt/status/1818498724269945172"
-                title="Airdrop Strategy Framework"
-                description="Comprehensive guide to designing effective token airdrops"
+                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681"
+                title="Hyperlane Bridge Guide"
+                description="This tweet offered a simplified, non-dev guide to creating a Hyperlane Bridge, making advanced infrastructure accessible to everyday users. The tweet used a gated CTA to distribute the guide via DMs, helping build direct engagement."
                 metrics={{
-                  impressions: "18.5K+",
-                  shares: "62",
-                  comments: "29",
-                  likes: "176",
-                  bookmarks: "94"
+                  impressions: "1.6K+",
+                  shares: "20+",
+                  comments: "44",
+                  likes: "44",
+                  bookmarks: "13"
                 }}
                 tactics={[
-                  "Created framework for airdrop qualification criteria",
-                  "Balanced incentives for different user segments",
-                  "Addressed common pitfalls and Sybil resistance",
-                  "Included post-airdrop retention strategies"
+                  "Targeted non-technical audience underserved by protocol documentation",
+                  "Used 'like + comment + repost' CTA to create viral loop",
+                  "Implemented gated DM model for exclusivity and personal connection",
+                  "Positioned project as beginner-friendly",
+                  "Boosted onboarding among curious users - key for infra products"
                 ]}
                 index={5}
               />

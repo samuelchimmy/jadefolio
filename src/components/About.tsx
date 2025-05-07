@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
-import { Rocket, Star, Trending up, Award, Zap } from 'lucide-react';
+import { Rocket, Star, TrendingUp, Award, Zap } from 'lucide-react';
 
 const TimelineItem = ({ 
   year, 

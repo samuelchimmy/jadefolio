@@ -193,12 +193,12 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
   );
 };
 
-// Add global Twitter types
+// Fixed the TypeScript interface to match exactly
 declare global {
   interface Window {
     twttr?: {
       widgets: {
-        load: (element?: HTMLElement | null) => void;
+        load: () => void;
       };
     };
   }

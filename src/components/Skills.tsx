@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Zap, FileText, MessageSquare, Users, Rocket, Award, Briefcase, Code } from 'lucide-react';

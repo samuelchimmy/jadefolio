@@ -8,6 +8,7 @@ const ExperienceCard = ({
   company, 
   duration, 
   description, 
+  responsibilities = [],
   achievements = [],
   technologies = [],
   delay = 0,
@@ -15,7 +16,8 @@ const ExperienceCard = ({
   role: string; 
   company: string; 
   duration: string; 
-  description: string; 
+  description?: string; 
+  responsibilities?: string[];
   achievements?: string[];
   technologies?: string[];
   delay?: number;
@@ -33,7 +35,18 @@ const ExperienceCard = ({
         </div>
       </div>
       
-      <p className="text-muted-foreground mb-6">{description}</p>
+      {description && <p className="text-muted-foreground mb-6">{description}</p>}
+      
+      {responsibilities.length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-md font-semibold mb-2">Responsibilities:</h4>
+          <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+            {responsibilities.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       
       {achievements.length > 0 && (
         <div className="mb-6">
@@ -69,16 +82,25 @@ const Experience = () => {
 
         <div className="space-y-8">
           <ExperienceCard 
-            role="Growth Strategist & Content Creator" 
+            role="Ambassador Lead & Community Manager" 
             company="EntropyFi" 
-            duration="2023 - Present"
-            description="Led content strategy for a DeFi protocol focused on sustainable yield generation, translating complex financial mechanisms into accessible content."
-            achievements={[
-              "Developed comprehensive content roadmap that grew Twitter following by 200% in 6 months",
-              "Created viral educational threads that generated 50K+ impressions per post",
-              "Simplified technical documentation that increased protocol adoption among non-technical users by 45%"
+            duration="03/2022 - 05/2023"
+            responsibilities={[
+              "Led the ambassador program, driving community engagement and brand advocacy in the Web3 space.",
+              "Recruited, trained, and managed a global team of 150+ ambassadors with performance-driven incentives.",
+              "Developed strategies to engage the community through events, contests, and educational content.",
+              "Managed active communities across Discord, Telegram, and Twitter, maintaining brand tone and values.",
+              "Created onboarding materials, campaign briefs, and content to support ambassador efforts.",
+              "Collaborated with core teams to align ambassador activities with product and marketing goals.",
+              "Facilitated feedback loops between the community and development teams for product improvements.",
+              "Hosted AMAs, virtual events, and campaigns to sustain engagement and participation."
             ]}
-            technologies={["Twitter/X", "Discord", "Notion", "Hashnode", "Markdown"]}
+            achievements={[
+              "Scaled the ambassador program to 150+ active members, significantly boosting brand visibility.",
+              "Contributed to Entropyfi's growth, driving protocol adoption, TVL expansion, and retention.",
+              "Collected and analyzed feedback that led to UI/UX and feature improvements."
+            ]}
+            technologies={["Discord", "Telegram", "Twitter/X", "Community Management", "Ambassador Program"]}
             delay={100}
           />
           
@@ -86,11 +108,17 @@ const Experience = () => {
             role="Content Writer & Community Administrator" 
             company="Metis.io" 
             duration="05/2023 - 09/2023"
-            description="Managed community growth and educational content for an Ethereum L2 scaling solution, focusing on developer adoption and technical explainers."
+            responsibilities={[
+              "Developed and produced blog posts, educational content, and weekly community updates to simplify blockchain and Layer 2 concepts, enhancing transparency and engagement.",
+              "Led community campaigns and interactive events to foster inclusivity.",
+              "Managed Discord and other platforms, offering support and enforcing guidelines.",
+              "Aligned content with marketing goals and project milestones.",
+              "Collected community feedback to inform product improvements."
+            ]}
             achievements={[
-              "Created developer-focused content that drove a 3x increase in GitHub contributions",
-              "Organized technical AMAs and educational workshops that onboarded 500+ new developers",
-              "Led documentation overhaul that reduced support tickets by 40% and increased self-service resolution"
+              "Helped onboard thousands by making blockchain content accessible.",
+              "Boosted engagement and retention with gamified events and updates.",
+              "Built strong community cohesion through active moderation and support."
             ]}
             technologies={["Discord", "GitHub", "Substack", "Twitter/X", "Technical Documentation"]}
             delay={300}
@@ -100,11 +128,16 @@ const Experience = () => {
             role="Copywriter" 
             company="Koris.io" 
             duration="11/2024 - 02/2025"
-            description="Developed technical content strategy for a cross-chain interoperability protocol, creating educational materials and growth-focused campaigns."
+            responsibilities={[
+              "Created strategic content across blogs, marketing, website copy, and grant proposals.",
+              "Simplified complex blockchain and DAO concepts for diverse audiences.",
+              "Ensured consistent brand voice across communications.",
+              "Aligned content with strategic goals across product, marketing, and BD teams."
+            ]}
             achievements={[
-              "Co-authored technical whitepaper that helped secure $1.2M in early funding",
-              "Created 'Bridges Explained' content series that generated 75K+ impressions",
-              "Led airdrop campaign content strategy resulting in 12K+ qualified participants"
+              "Secured grants through compelling proposals.",
+              "Strengthened Koris' Web3 brand presence via clear, high-impact storytelling.",
+              "Built scalable content systems for onboarding and long-term marketing."
             ]}
             technologies={["Gitbook", "Twitter/X", "Farcaster", "Whitepaper", "Technical Documentation"]}
             delay={500}

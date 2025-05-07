@@ -68,7 +68,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
               >
                 <Mail size={20} />
-                <span className="text-sm">EdozieSammy101@gmail.com</span>
+                <span className="text-sm">Email</span>
               </a>
               
               <a 

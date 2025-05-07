@@ -78,7 +78,7 @@
   }
   
   .terminal-container {
-    @apply border border-terminal-green/30 rounded-md p-6 backdrop-blur-sm;
+    @apply border border-terminal-green/30 rounded-md p-6 backdrop-blur-sm relative;
     background: rgba(18, 18, 18, 0.7);
     box-shadow: 0 0 15px rgba(74, 246, 38, 0.15);
   }
@@ -162,4 +162,53 @@
   .icon-hover {
     @apply transition-all duration-300 transform hover:scale-110 hover:text-terminal-green;
   }
+
+  /* Added animations for scroll effects */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  
+  /* Advanced hover effects */
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: 0 0 15px rgba(74, 246, 38, 0.5);
+  }
+  
+  .scale-on-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .scale-on-hover:hover {
+    transform: scale(1.05);
+  }
+  
+  .float-on-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .float-on-hover:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* Twitter tweet embed customization */
+.twitter-tweet {
+  margin: 0 auto;
+  max-width: 100% !important;
 }

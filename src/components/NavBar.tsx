@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { ChevronRight } from 'lucide-react';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,15 +40,18 @@ const NavBar = () => {
           {[
             { id: 'home', label: 'Home' },
             { id: 'about', label: 'About' },
-            { id: 'case-studies', label: 'Case Studies' },
+            { id: 'portfolio', label: 'Portfolio' },
+            { id: 'skills', label: 'Skills' },
+            { id: 'experience', label: 'Experience' },
             { id: 'contact', label: 'Contact' },
           ].map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-terminal-green transition-colors animated-button"
+                className="text-muted-foreground hover:text-terminal-green transition-colors animated-button group flex items-center gap-1"
               >
                 {item.label}
+                <ChevronRight className="h-4 w-4 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
               </button>
             </li>
           ))}
@@ -55,9 +59,9 @@ const NavBar = () => {
         
         <button 
           onClick={() => scrollToSection('contact')}
-          className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-colors animated-button"
+          className="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/20"
         >
-          Get in Touch
+          Work With Me
         </button>
       </nav>
     </header>

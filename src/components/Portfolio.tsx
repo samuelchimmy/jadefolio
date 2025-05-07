@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import TweetCard from './TweetCard';
+import { Mail, Link, Telegram, Whatsapp } from 'lucide-react';
 
 const BlogPost = ({ 
   title, 
@@ -91,6 +91,65 @@ const PortfolioItem = ({
   </Card>
 );
 
+const CommunityItem = ({
+  title,
+  description,
+  platform,
+  link,
+  memberCount,
+  focus,
+  index = 0
+}: {
+  title: string;
+  description: string;
+  platform: "telegram" | "whatsapp" | "discord" | "other";
+  link: string;
+  memberCount: string;
+  focus: string[];
+  index?: number;
+}) => {
+  const platformIcons = {
+    telegram: <Telegram className="h-5 w-5" />,
+    whatsapp: <Whatsapp className="h-5 w-5" />,
+    discord: <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /><path d="M16 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /><path d="M8.5 17.5 7 19l.7.7A9.7 9.7 0 0 0 12 21a9.8 9.8 0 0 0 4.3-1.3l.7-.7-1.5-1.5" /><path d="M20 10a8 8 0 0 0-4-5.3S13 3 12 3s-4 1.7-4 1.7A8 8 0 0 0 4 10a17.5 17.5 0 0 0-.3 4.4l.5 1.4a10 10 0 0 0 3.2 3.1h.4A45 45 0 0 0 12 20a45 45 0 0 0 4.2-1.1h.4a10 10 0 0 0 3.2-3.1l.5-1.4A17.5 17.5 0 0 0 20 10Z" /></svg>,
+    other: <Link className="h-5 w-5" />
+  };
+
+  return (
+    <Card className="overflow-hidden transition-all duration-300 group animate-fade-in border border-muted bg-card/50 backdrop-blur-sm hover:border-terminal-green/50" style={{ animationDelay: `${index * 150}ms` }}>
+      <CardContent className="p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-xl font-bold group-hover:text-terminal-green transition-colors">{title}</h3>
+          <span className="text-sm text-terminal-green font-semibold">{memberCount} members</span>
+        </div>
+        
+        <p className="text-muted-foreground mb-4">{description}</p>
+        
+        <div className="mb-4">
+          <h4 className="text-sm font-medium mb-2">Focus Areas:</h4>
+          <div className="flex flex-wrap gap-2">
+            {focus.map((area, i) => (
+              <span key={i} className="px-2.5 py-0.5 rounded-full text-xs bg-muted text-foreground">
+                {area}
+              </span>
+            ))}
+          </div>
+        </div>
+        
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-terminal-green hover:text-terminal-blue transition-all duration-300 transform hover:-translate-y-1"
+        >
+          {platformIcons[platform]}
+          Join Community <span className="ml-1">→</span>
+        </a>
+      </CardContent>
+    </Card>
+  );
+};
+
 const Portfolio = () => {
   const [expandedTweets, setExpandedTweets] = useState<boolean[]>(Array(6).fill(false));
 
@@ -105,13 +164,14 @@ const Portfolio = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="section-heading section-title text-center mb-8">Portfolio</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-          A collection of my viral growth campaigns, thought leadership content, and community-building initiatives that 
-          have driven significant engagement and adoption across the Web3 ecosystem.
+          A collection of my viral growth campaigns, thought leadership content, community-building initiatives, and copywriting 
+          that have driven significant engagement and adoption across the Web3 ecosystem.
         </p>
 
         <Tabs defaultValue="growth" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-12">
+          <TabsList className="grid w-full grid-cols-4 mb-12">
             <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Growth Campaigns</TabsTrigger>
+            <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Community Building</TabsTrigger>
             <TabsTrigger value="blog" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Blog & Thought Leadership</TabsTrigger>
             <TabsTrigger value="copywriting" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Copywriting</TabsTrigger>
           </TabsList>
@@ -243,6 +303,86 @@ const Portfolio = () => {
                 ]}
                 index={5}
               />
+            </div>
+          </TabsContent>
+
+          <TabsContent value="community" className="space-y-8">
+            <div className="grid grid-cols-1 gap-8 mb-12">
+              <Card className="border border-muted rounded-lg overflow-hidden bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-4 text-gradient section-title">0xfarmer Community</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Founded and built the 0xfarmer community, a thriving group of over 1,000 like-minded Web3 enthusiasts and professionals. 
+                    The community serves as a hub for sharing airdrop strategies, protocol tutorials, technical breakdowns, and general money-making 
+                    opportunities in the Web3 ecosystem.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                    <CommunityItem
+                      title="0xfarmer Telegram"
+                      description="The primary hub for the 0xfarmer community, where members receive regular updates on airdrops, protocol insights, and exclusive alpha."
+                      platform="telegram"
+                      link="https://t.me/+Ma4xal22__g3OTgx"
+                      memberCount="800+"
+                      focus={["Airdrop Strategies", "Protocol Analysis", "Alpha Sharing", "DeFi Tactics"]}
+                      index={0}
+                    />
+                    
+                    <CommunityItem
+                      title="0xfarmer WhatsApp Channel"
+                      description="A complementary channel focused on broader Web3 education and immediate opportunities, making complex concepts accessible to members at all knowledge levels."
+                      platform="whatsapp"
+                      link="https://www.whatsapp.com/channel/0029VaAs0DMH5JLwrAD3wM1U"
+                      memberCount="200+"
+                      focus={["Web3 Education", "Beginner Guides", "Market Updates", "Opportunity Alerts"]}
+                      index={1}
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border border-muted rounded-lg overflow-hidden h-full bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-6 h-full flex flex-col">
+                  <h3 className="text-xl font-bold mb-3 text-terminal-green">MetisDAO Community Initiatives</h3>
+                  <p className="text-muted-foreground mb-4 flex-grow">
+                    As Content Writer & Community Administrator at MetisDAO, I developed educational materials and led interactive campaigns that made Layer 2 
+                    technology accessible to thousands of users. My work focused on simplifying complex concepts, enhancing transparency, and fostering 
+                    an inclusive environment across all community touchpoints.
+                  </p>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-medium mb-2">Key Achievements:</h4>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                      <li className="mb-1">Helped onboard thousands of users by creating accessible blockchain content</li>
+                      <li className="mb-1">Boosted engagement metrics through gamified community events</li>
+                      <li className="mb-1">Built strong community cohesion through active moderation and support</li>
+                      <li className="mb-1">Created weekly updates and educational posts that simplified Layer 2 concepts</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-muted rounded-lg overflow-hidden h-full bg-card/50 backdrop-blur-sm">
+                <CardContent className="p-6 h-full flex flex-col">
+                  <h3 className="text-xl font-bold mb-3 text-terminal-green">EntropyFi Ambassador Program</h3>
+                  <p className="text-muted-foreground mb-4 flex-grow">
+                    As Ambassador Lead & Community Manager at EntropyFi, I built and managed a global network of 150+ ambassadors, 
+                    creating performance-driven incentive structures and comprehensive training materials. The program significantly 
+                    expanded the protocol's reach across various Web3 communities and geographical regions.
+                  </p>
+                  <div className="mt-4">
+                    <h4 className="text-sm font-medium mb-2">Program Highlights:</h4>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground">
+                      <li className="mb-1">Scaled ambassador presence to 150+ active members globally</li>
+                      <li className="mb-1">Created performance-based reward systems that drove consistent growth</li>
+                      <li className="mb-1">Developed comprehensive onboarding materials and campaign briefs</li>
+                      <li className="mb-1">Hosted regular AMAs, virtual events, and engagement campaigns</li>
+                      <li className="mb-1">Built feedback loops between community and development teams</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </TabsContent>
 

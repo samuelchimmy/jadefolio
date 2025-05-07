@@ -198,5 +198,4 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
   );
 };
 
-// Remove duplicate declaration - already defined in global.d.ts
 export default TweetCard;

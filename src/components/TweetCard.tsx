@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -193,15 +192,5 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
   );
 };
 
-// Fixed the TypeScript interface to match exactly
-declare global {
-  interface Window {
-    twttr?: {
-      widgets: {
-        load: () => void;
-      };
-    };
-  }
-}
-
+// Remove duplicate declaration - already defined in global.d.ts
 export default TweetCard;

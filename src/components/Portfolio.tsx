@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -119,7 +120,7 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843?t=zuOSpxeGLxf4smkDuTdrlA&s=19"
+                tweetUrl="https://x.com/MetisCharter/status/1843074517423587745"
                 title="Community Growth Strategy"
                 description="A transparent, performance-based breakdown of crypto earnings, detailing successful airdrop farming and lessons learned. It combined storytelling with value signals to boost credibility and engagement."
                 metrics={{
@@ -140,7 +141,7 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681?t=l1NkvF63DHE2AdT6DsoPKw&s=19"
+                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681"
                 title="Hyperlane Bridge Guide"
                 description="This tweet offered a simplified, non-dev guide to creating a Hyperlane Bridge, making advanced infrastructure accessible to everyday users. The tweet used a gated CTA to distribute the guide via DMs, helping build direct engagement."
                 metrics={{

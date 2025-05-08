@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -6,7 +5,6 @@ import TweetCard from './portfolio/TweetCard';
 import BlogPost from './portfolio/BlogPost';
 import PortfolioItem from './portfolio/PortfolioItem';
 import CommunityItem from './portfolio/CommunityItem';
-import { MessageCircle } from 'lucide-react';
 
 const Portfolio = () => {
   const [expandedTweets, setExpandedTweets] = useState<boolean[]>(Array(6).fill(false));
@@ -100,7 +98,7 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843"
+                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843?t=zuOSpxeGLxf4smkDuTdrlA&s=19"
                 title="Token Mechanics Breakdown"
                 description="This tweet broke down a complex redistribution formula for $ZRO token holders in a clear, actionable way. It helped users estimate how much extra they could claim from unclaimed token reserves — turning confusion into clarity at a key moment post-airdrop."
                 metrics={{
@@ -121,7 +119,7 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://twitter.com/MetisCharter/status/1672441214159085568"
+                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843?t=zuOSpxeGLxf4smkDuTdrlA&s=19"
                 title="Community Growth Strategy"
                 description="A transparent, performance-based breakdown of crypto earnings, detailing successful airdrop farming and lessons learned. It combined storytelling with value signals to boost credibility and engagement."
                 metrics={{
@@ -142,7 +140,7 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681"
+                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681?t=l1NkvF63DHE2AdT6DsoPKw&s=19"
                 title="Hyperlane Bridge Guide"
                 description="This tweet offered a simplified, non-dev guide to creating a Hyperlane Bridge, making advanced infrastructure accessible to everyday users. The tweet used a gated CTA to distribute the guide via DMs, helping build direct engagement."
                 metrics={{

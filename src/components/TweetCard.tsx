@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -198,11 +197,6 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
   );
 };
 
-// Add a declaration for the Twitter widgets library
-declare global {
-  interface Window {
-    twttr: any;
-  }
-}
+// Removing the duplicate declaration - we'll use the one from global.d.ts
 
 export default TweetCard;

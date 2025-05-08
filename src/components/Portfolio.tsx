@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import TweetCard from './TweetCard';
-import { Mail, Link, Telegram, Whatsapp } from 'lucide-react';
+import { Mail, Link, MessageCircle } from 'lucide-react';
 
 const BlogPost = ({ 
   title, 
@@ -109,8 +110,8 @@ const CommunityItem = ({
   index?: number;
 }) => {
   const platformIcons = {
-    telegram: <Telegram className="h-5 w-5" />,
-    whatsapp: <Whatsapp className="h-5 w-5" />,
+    telegram: <MessageCircle className="h-5 w-5" />,
+    whatsapp: <MessageCircle className="h-5 w-5" />,
     discord: <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /><path d="M16 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /><path d="M8.5 17.5 7 19l.7.7A9.7 9.7 0 0 0 12 21a9.8 9.8 0 0 0 4.3-1.3l.7-.7-1.5-1.5" /><path d="M20 10a8 8 0 0 0-4-5.3S13 3 12 3s-4 1.7-4 1.7A8 8 0 0 0 4 10a17.5 17.5 0 0 0-.3 4.4l.5 1.4a10 10 0 0 0 3.2 3.1h.4A45 45 0 0 0 12 20a45 45 0 0 0 4.2-1.1h.4a10 10 0 0 0 3.2-3.1l.5-1.4A17.5 17.5 0 0 0 20 10Z" /></svg>,
     other: <Link className="h-5 w-5" />
   };

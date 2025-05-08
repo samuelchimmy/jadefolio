@@ -198,4 +198,11 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
   );
 };
 
+// Add a declaration for the Twitter widgets library
+declare global {
+  interface Window {
+    twttr: any;
+  }
+}
+
 export default TweetCard;

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -99,27 +98,6 @@ const Portfolio = () => {
               />
               
               <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1836622688627957843?t=zuOSpxeGLxf4smkDuTdrlA&s=19"
-                title="Token Mechanics Breakdown"
-                description="This tweet broke down a complex redistribution formula for $ZRO token holders in a clear, actionable way. It helped users estimate how much extra they could claim from unclaimed token reserves — turning confusion into clarity at a key moment post-airdrop."
-                metrics={{
-                  impressions: "54.4K+",
-                  shares: "21+",
-                  comments: "38",
-                  likes: "232",
-                  bookmarks: "62"
-                }}
-                tactics={[
-                  "Simplified onchain math into a plug-and-play format with examples",
-                  "Made complex formulas easy for average users to apply",
-                  "Positioned as go-to voice for timely, accurate alpha",
-                  "Boosted user confidence during critical post-airdrop window",
-                  "Drove protocol engagement through clarity"
-                ]}
-                index={3}
-              />
-              
-              <TweetCard
                 tweetUrl="https://x.com/MetisCharter/status/1843074517423587745"
                 title="Community Growth Strategy"
                 description="A transparent, performance-based breakdown of crypto earnings, detailing successful airdrop farming and lessons learned. It combined storytelling with value signals to boost credibility and engagement."
@@ -138,27 +116,6 @@ const Portfolio = () => {
                   "Positioned as credible voice in alpha-sharing and airdrop farming niche"
                 ]}
                 index={4}
-              />
-              
-              <TweetCard
-                tweetUrl="https://x.com/MetisCharter/status/1839033794235703681"
-                title="Hyperlane Bridge Guide"
-                description="This tweet offered a simplified, non-dev guide to creating a Hyperlane Bridge, making advanced infrastructure accessible to everyday users. The tweet used a gated CTA to distribute the guide via DMs, helping build direct engagement."
-                metrics={{
-                  impressions: "1.6K+",
-                  shares: "20+",
-                  comments: "44",
-                  likes: "44",
-                  bookmarks: "13"
-                }}
-                tactics={[
-                  "Targeted non-technical audience underserved by protocol documentation",
-                  "Used 'like + comment + repost' CTA to create viral loop",
-                  "Implemented gated DM model for exclusivity and personal connection",
-                  "Positioned project as beginner-friendly",
-                  "Boosted onboarding among curious users - key for infra products"
-                ]}
-                index={5}
               />
             </div>
           </TabsContent>

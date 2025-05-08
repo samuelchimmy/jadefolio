@@ -1,4 +1,3 @@
-
 interface Window {
   twttr: {
     widgets: {

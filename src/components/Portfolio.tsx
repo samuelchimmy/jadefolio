@@ -25,11 +25,12 @@ const Portfolio = () => {
         </p>
 
         <Tabs defaultValue="growth" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-12">
+          <TabsList className="grid w-full grid-cols-5 mb-12">
             <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Growth Campaigns</TabsTrigger>
             <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Community Building</TabsTrigger>
             <TabsTrigger value="blog" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Blog & Thought Leadership</TabsTrigger>
             <TabsTrigger value="copywriting" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Copywriting</TabsTrigger>
+            <TabsTrigger value="tools" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Tools Built</TabsTrigger>
           </TabsList>
 
           <TabsContent value="growth" className="space-y-8">
@@ -279,6 +280,49 @@ const Portfolio = () => {
                   {label: "Shares", value: "45+"}
                 ]}
                 index={3}
+              />
+            </div>
+          </TabsContent>
+
+          <TabsContent value="tools" className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <PortfolioItem
+                title="SuccinctStar Club"
+                description="A gamified quiz app built from scratch featuring leveled questions drawn from the Succinct whitepaper. Includes a leaderboard ranking players to boost community engagement and educate members about Succinct technology."
+                imageUrl="/assets/succinctstar.png"
+                link="http://succinctstar.club/"
+                metrics={[
+                  {label: "User Engagement", value: "High"},
+                  {label: "Educational Impact", value: "90%"},
+                  {label: "Community Reach", value: "500+"}
+                ]}
+                index={0}
+              />
+              
+              <PortfolioItem
+                title="Layer0Dapps"
+                description="A lightweight website showcasing applications built on the LayerZero tech stack. This resource was instrumental to the LayerZero community before they had an official ecosystem page, helping users discover and access LayerZero apps from one place."
+                imageUrl="/assets/layer0dapps.png"
+                link="https://layer0dapps.spread.name/"
+                metrics={[
+                  {label: "Apps Indexed", value: "45+"},
+                  {label: "Monthly Visits", value: "1.2K+"},
+                  {label: "Community Value", value: "Essential"}
+                ]}
+                index={1}
+              />
+              
+              <PortfolioItem
+                title="Ultra Gigabrain Yield Farming Strategy"
+                description="Designed an advanced yield farming strategy across multiple Solana lending markets including Kamino and MarginFi. Features fund looping across markets with efficient leverage optimization and interactive, clickable strategies on an implementation mind map."
+                imageUrl="/assets/yield-strategy.png"
+                link="https://www.canva.com/design/DAF1JuTQPLQ/Y4LZ_NkLu0TjP3qgV9ytHQ/view?utm_content=DAF1JuTQPLQ&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                metrics={[
+                  {label: "APY Potential", value: "15-25%"},
+                  {label: "Risk Level", value: "Moderate"},
+                  {label: "Implementation", value: "Step-by-step"}
+                ]}
+                index={2}
               />
             </div>
           </TabsContent>

@@ -9,9 +9,10 @@ interface PortfolioItemProps {
   link: string; 
   metrics?: Array<{label: string; value: string}>; 
   index?: number;
+  tags?: string[];
 }
 
-const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index = 0 }: PortfolioItemProps) => (
+const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index = 0, tags = [] }: PortfolioItemProps) => (
   <Card className="overflow-hidden transition-all duration-300 group animate-fade-in border border-muted bg-card/50 backdrop-blur-sm hover:border-terminal-green/50" style={{ animationDelay: `${index * 150}ms` }}>
     <CardContent className="p-6">
       {imageUrl && (
@@ -25,6 +26,16 @@ const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index
       )}
       <h3 className="text-xl font-bold mb-3 group-hover:text-terminal-green transition-colors">{title}</h3>
       <p className="text-muted-foreground mb-4">{description}</p>
+      
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag, i) => (
+            <span key={i} className="px-2 py-1 text-xs rounded-full bg-muted/70 text-muted-foreground">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
       
       {metrics.length > 0 && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">

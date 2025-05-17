@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -288,7 +289,7 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <PortfolioItem
                 title="OptimumStar"
-                description="An interactive platform designed specifically for the Optimum ecosystem that provides users with accessible educational resources, interactive learning experiences, and community engagement tools to better understand Optimum's revolutionary blockchain solutions."
+                description="A gamified quiz platform built specifically for the Optimum community. Similar to SuccinctStar, it features educational content about Optimum's RLNC technology in an interactive, fun format with leaderboards to boost community engagement and understanding."
                 imageUrl="/assets/optimumstar.png"
                 link="https://optimumstar.quest/"
                 metrics={[
@@ -296,6 +297,7 @@ const Portfolio = () => {
                   {label: "Educational Impact", value: "95%"},
                   {label: "Community Reach", value: "700+"}
                 ]}
+                tags={["Quiz App", "Gamification", "RLNC Technology", "Community Education"]}
                 index={0}
               />
               
@@ -309,6 +311,7 @@ const Portfolio = () => {
                   {label: "Educational Impact", value: "90%"},
                   {label: "Community Reach", value: "500+"}
                 ]}
+                tags={["Quiz App", "Gamification", "ZK Technology", "Community Education"]}
                 index={1}
               />
               
@@ -322,6 +325,7 @@ const Portfolio = () => {
                   {label: "Monthly Visits", value: "1.2K+"},
                   {label: "Community Value", value: "Essential"}
                 ]}
+                tags={["Resource Directory", "LayerZero Ecosystem", "Community Tool"]}
                 index={2}
               />
               
@@ -335,6 +339,7 @@ const Portfolio = () => {
                   {label: "Risk Level", value: "Moderate"},
                   {label: "Implementation", value: "Step-by-step"}
                 ]}
+                tags={["DeFi Strategy", "Solana", "Yield Farming", "Fund Looping"]}
                 index={3}
               />
             </div>

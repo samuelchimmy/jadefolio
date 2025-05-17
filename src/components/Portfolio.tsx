@@ -287,6 +287,19 @@ const Portfolio = () => {
           <TabsContent value="tools" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <PortfolioItem
+                title="OptimumStar"
+                description="An interactive platform designed specifically for the Optimum ecosystem that provides users with accessible educational resources, interactive learning experiences, and community engagement tools to better understand Optimum's revolutionary blockchain solutions."
+                imageUrl="/assets/optimumstar.png"
+                link="https://optimumstar.quest/"
+                metrics={[
+                  {label: "User Engagement", value: "High"},
+                  {label: "Educational Impact", value: "95%"},
+                  {label: "Community Reach", value: "700+"}
+                ]}
+                index={0}
+              />
+              
+              <PortfolioItem
                 title="SuccinctStar Club"
                 description="A gamified quiz app built from scratch featuring leveled questions drawn from the Succinct whitepaper. Includes a leaderboard ranking players to boost community engagement and educate members about Succinct technology."
                 imageUrl="/assets/succinctstar.png"
@@ -296,7 +309,7 @@ const Portfolio = () => {
                   {label: "Educational Impact", value: "90%"},
                   {label: "Community Reach", value: "500+"}
                 ]}
-                index={0}
+                index={1}
               />
               
               <PortfolioItem
@@ -309,7 +322,7 @@ const Portfolio = () => {
                   {label: "Monthly Visits", value: "1.2K+"},
                   {label: "Community Value", value: "Essential"}
                 ]}
-                index={1}
+                index={2}
               />
               
               <PortfolioItem
@@ -322,7 +335,7 @@ const Portfolio = () => {
                   {label: "Risk Level", value: "Moderate"},
                   {label: "Implementation", value: "Step-by-step"}
                 ]}
-                index={2}
+                index={3}
               />
             </div>
           </TabsContent>

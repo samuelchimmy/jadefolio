@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -289,7 +288,7 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <PortfolioItem
                 title="OptimumStar"
-                description="A gamified quiz platform built specifically for the Optimum community. Similar to SuccinctStar, it features educational content about Optimum's RLNC technology in an interactive, fun format with leaderboards to boost community engagement and understanding."
+                description="A gamified quiz platform built specifically for the Optimum community. It features educational content about Optimum's RLNC technology in an interactive, fun format with leaderboards to boost community engagement and understanding."
                 imageUrl="/assets/optimumstar.png"
                 link="https://optimumstar.quest/"
                 metrics={[

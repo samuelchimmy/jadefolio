@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -290,7 +289,6 @@ const Portfolio = () => {
               <PortfolioItem
                 title="OptimumStar"
                 description="A gamified quiz platform built specifically for the Optimum community. It features educational content about Optimum's RLNC technology in an interactive, fun format with leaderboards to boost community engagement and understanding."
-                imageUrl="/placeholder.svg"
                 link="https://optimumstar.quest/"
                 metrics={[
                   {label: "User Engagement", value: "High"},
@@ -304,7 +302,6 @@ const Portfolio = () => {
               <PortfolioItem
                 title="SuccinctStar Club"
                 description="A gamified quiz app built from scratch featuring leveled questions drawn from the Succinct whitepaper. Includes a leaderboard ranking players to boost community engagement and educate members about Succinct technology."
-                imageUrl="/placeholder.svg"
                 link="http://succinctstar.club/"
                 metrics={[
                   {label: "User Engagement", value: "High"},
@@ -318,7 +315,6 @@ const Portfolio = () => {
               <PortfolioItem
                 title="Layer0Dapps"
                 description="A lightweight website showcasing applications built on the LayerZero tech stack. This resource was instrumental to the LayerZero community before they had an official ecosystem page, helping users discover and access LayerZero apps from one place."
-                imageUrl="/placeholder.svg"
                 link="https://layer0dapps.spread.name/"
                 metrics={[
                   {label: "Apps Indexed", value: "45+"},
@@ -332,7 +328,6 @@ const Portfolio = () => {
               <PortfolioItem
                 title="Ultra Gigabrain Yield Farming Strategy"
                 description="Designed an advanced yield farming strategy across multiple Solana lending markets including Kamino and MarginFi. Features fund looping across markets with efficient leverage optimization and interactive, clickable strategies on an implementation mind map."
-                imageUrl="/placeholder.svg"
                 link="https://www.canva.com/design/DAF1JuTQPLQ/Y4LZ_NkLu0TjP3qgV9ytHQ/view?utm_content=DAF1JuTQPLQ&utm_campaign=designshare&utm_medium=link&utm_source=editor"
                 metrics={[
                   {label: "APY Potential", value: "15-25%"},

@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 220 13% 9%;
-    --foreground: 220 13% 90%;
+    --background: 260 20% 5%;
+    --foreground: 270 30% 92%;
 
-    --card: 220 13% 12%;
-    --card-foreground: 220 13% 95%;
+    --card: 265 25% 10%;
+    --card-foreground: 270 30% 95%;
 
-    --popover: 220 13% 9%;
-    --popover-foreground: 220 13% 90%;
+    --popover: 260 20% 5%;
+    --popover-foreground: 270 30% 92%;
 
-    --primary: 142 100% 55%;
-    --primary-foreground: 220 13% 9%;
+    --primary: 270 90% 65%;
+    --primary-foreground: 270 30% 98%;
 
-    --secondary: 192 100% 68%;
-    --secondary-foreground: 220 13% 9%;
+    --secondary: 300 80% 70%;
+    --secondary-foreground: 270 30% 98%;
 
-    --muted: 220 13% 16%;
-    --muted-foreground: 220 13% 60%;
+    --muted: 265 25% 15%;
+    --muted-foreground: 270 20% 70%;
 
-    --accent: 142 30% 20%;
-    --accent-foreground: 142 100% 55%;
+    --accent: 280 90% 60%;
+    --accent-foreground: 270 30% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 20%;
-    --input: 220 13% 16%;
-    --ring: 142 100% 40%;
+    --border: 270 50% 30%;
+    --input: 265 25% 15%;
+    --ring: 280 90% 70%;
 
     --radius: 0.5rem;
   }
@@ -74,13 +74,13 @@
 
 @layer components {
   .text-gradient {
-    @apply bg-gradient-to-r from-terminal-green to-terminal-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-purple to-brand-pink bg-clip-text text-transparent;
   }
   
   .terminal-container {
-    @apply border border-terminal-green/30 rounded-md p-6 backdrop-blur-sm relative;
+    @apply border border-brand-purple/30 rounded-md p-6 backdrop-blur-sm relative;
     background: rgba(18, 18, 18, 0.7);
-    box-shadow: 0 0 15px rgba(74, 246, 38, 0.15);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.15);
   }
   
   .tweet-card {
@@ -90,8 +90,8 @@
   }
   
   .tweet-card:hover {
-    @apply border-terminal-green/50;
-    box-shadow: 0 0 20px rgba(74, 246, 38, 0.2);
+    @apply border-brand-purple/50;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
     transform: translateY(-5px);
   }
 

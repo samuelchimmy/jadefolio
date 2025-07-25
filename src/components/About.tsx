@@ -51,29 +51,18 @@ const About = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="text-terminal-green text-xl mb-4">Hi, I'm Samuel also known as Jadeofwallstreet</div>
-              <h3 className="text-xl font-bold mb-3">Content strategist | Growth hacker | Onchain storyteller</h3>
+              <div className="text-terminal-green text-xl mb-4">Hi, I’m Samuel also known as <strong>Jadeofwallstreet</strong></div>
               <p className="text-muted-foreground mb-4">
-                Helping Web3 products go from overlooked to oversubscribed.
+                I’m a Vibe Coder. I use AI like a co-pilot, transforming product ideas into live, polished web apps. Whether I’m prompting Cursor, debugging with Claude, or styling with Lovable, my dev flow is fast, creative, and effective.
               </p>
               
               <p className="text-muted-foreground mb-4">
-                I specialize in crafting viral, high-conversion content that translates complex blockchain concepts 
-                into simple, engaging narratives. From simplifying advanced tokenomics to creating FOMO-fueled beta launches, 
-                I know how to speak the language of crypto natives, meme-lords, degen farmers, and curious builders.
+                I come from a background in content strategy, community building, and technical storytelling and now I build apps where those skills meet code.
               </p>
               
               <p className="text-muted-foreground">
-                My work lives at the intersection of community psychology, airdrop strategy, and technical storytelling — 
-                where memes meet mechanisms, and CT meets product-market fit.
+                If you're building a bold digital product and want someone who can prototype, iterate, and deploy fast (without sacrificing user delight I'm your guy.
               </p>
-
-              <div className="mt-4 p-3 border border-terminal-green/30 rounded-md bg-muted/30">
-                <p className="text-terminal-green">
-                  If you're building something bold in Web3 and need a loud, clear, and effective voice to tell your story:
-                  <span className="font-bold"> Let's make noise.</span>
-                </p>
-              </div>
             </div>
           </div>
           
@@ -90,31 +79,31 @@ const About = () => {
               <TimelineItem 
                 year="2022" 
                 title="Community Leadership" 
-                description="Led multiple Web3 communities, organizing educational events and facilitating growth through strategic content."
+                description="Led communities, ran airdrop strategies, and created viral educational content"
                 icon={Star}
                 delay={300}
               />
               
               <TimelineItem 
                 year="2023" 
-                title="Growth Campaigns" 
-                description="Developed and executed viral growth campaigns for multiple protocols, driving significant user acquisition."
+                title="Content Strategy"
+                description="Focused on content strategy, writing for protocols, simplifying tokenomics"
                 icon={TrendingUp}
                 delay={500}
               />
               
               <TimelineItem 
-                year="2024" 
-                title="Content Strategy" 
-                description="Refined my approach to technical storytelling, helping projects navigate complex tokenomics and onchain narratives."
+                year="Mid-2024"
+                title="Vibe Coding"
+                description="Discovered Vibe Coding began building apps with Cursor, Lovable, Claude"
                 icon={Award}
                 delay={700}
               />
               
               <TimelineItem 
-                year="Present" 
-                title="Scaling Impact" 
-                description="Now focused on helping the next generation of Web3 protocols achieve sustainable growth and community engagement."
+                year="2025"
+                title="Full-Stack Development"
+                description="Launched Learnable, CodeBox, and multiple AI-built apps. Fully transitioned into AI-native web development"
                 icon={Zap}
                 delay={900}
               />

@@ -74,73 +74,28 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 px-6 bg-muted/20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="section-heading section-title text-center mb-8">Experience</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-          I've helped Web3 projects across multiple niches amplify their message and grow their communities through 
-          strategic content and growth initiatives.
-        </p>
+        <h2 className="section-heading section-title text-center mb-8">Experience: From Growth Strategist to AI-Powered Builder</h2>
 
         <div className="space-y-8">
           <ExperienceCard 
-            role="Ambassador Lead & Community Manager" 
-            company="EntropyFi" 
-            duration="03/2022 - 05/2023"
+            role="AI-Powered Web Builder (Freelance & Solo Projects)"
+            company="Self-employed"
+            duration="06/2024 – Present"
             responsibilities={[
-              "Led the ambassador program, driving community engagement and brand advocacy in the Web3 space.",
-              "Recruited, trained, and managed a global team of 150+ ambassadors with performance-driven incentives.",
-              "Developed strategies to engage the community through events, contests, and educational content.",
-              "Managed active communities across Discord, Telegram, and Twitter, maintaining brand tone and values.",
-              "Created onboarding materials, campaign briefs, and content to support ambassador efforts.",
-              "Collaborated with core teams to align ambassador activities with product and marketing goals.",
-              "Facilitated feedback loops between the community and development teams for product improvements.",
-              "Hosted AMAs, virtual events, and campaigns to sustain engagement and participation."
+              "Prompted and iterated with Claude, GPT, and Lovable to scaffold, generate, and debug code",
+              "Built responsive, scalable UIs with Tailwind + React",
+              "Managed backend setup with Supabase",
+              "Integrated dev tools, dashboards, auth flows, and real-time databases",
+              "Handled deployment (Vercel) and project documentation",
             ]}
             achievements={[
-              "Scaled the ambassador program to 150+ active members, significantly boosting brand visibility.",
-              "Contributed to Entropyfi's growth, driving protocol adoption, TVL expansion, and retention.",
-              "Collected and analyzed feedback that led to UI/UX and feature improvements."
+              "Learnable AI – EdTech for Nigerian universities",
+              "CodeBox – Dev utility platform",
+              "StreetQuest – AI-built GeoGuessr clone",
+              "0xNotes – Anonymous journaling + daily stats",
             ]}
-            technologies={["Discord", "Telegram", "Twitter/X", "Community Management", "Ambassador Program"]}
+            technologies={["Cursor", "Supabase", "Lovable", "Google Jules", "React", "Tailwind", "Vercel"]}
             delay={100}
-          />
-          
-          <ExperienceCard 
-            role="Content Writer & Community Administrator" 
-            company="Metis.io" 
-            duration="05/2023 - 09/2023"
-            responsibilities={[
-              "Developed and produced blog posts, educational content, and weekly community updates to simplify blockchain and Layer 2 concepts, enhancing transparency and engagement.",
-              "Led community campaigns and interactive events to foster inclusivity.",
-              "Managed Discord and other platforms, offering support and enforcing guidelines.",
-              "Aligned content with marketing goals and project milestones.",
-              "Collected community feedback to inform product improvements."
-            ]}
-            achievements={[
-              "Helped onboard thousands by making blockchain content accessible.",
-              "Boosted engagement and retention with gamified events and updates.",
-              "Built strong community cohesion through active moderation and support."
-            ]}
-            technologies={["Discord", "GitHub", "Substack", "Twitter/X", "Technical Documentation"]}
-            delay={300}
-          />
-          
-          <ExperienceCard 
-            role="Copywriter" 
-            company="Koris.io" 
-            duration="11/2024 - 02/2025"
-            responsibilities={[
-              "Created strategic content across blogs, marketing, website copy, and grant proposals.",
-              "Simplified complex blockchain and DAO concepts for diverse audiences.",
-              "Ensured consistent brand voice across communications.",
-              "Aligned content with strategic goals across product, marketing, and BD teams."
-            ]}
-            achievements={[
-              "Secured grants through compelling proposals.",
-              "Strengthened Koris' Web3 brand presence via clear, high-impact storytelling.",
-              "Built scalable content systems for onboarding and long-term marketing."
-            ]}
-            technologies={["Gitbook", "Twitter/X", "Farcaster", "Whitepaper", "Technical Documentation"]}
-            delay={500}
           />
         </div>
       </div>

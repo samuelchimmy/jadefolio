@@ -16,7 +16,7 @@ const Footer = () => {
             </span>
           </div>
           <p className="text-sm text-muted-foreground mt-1 text-center md:text-left">
-            Making Web3 accessible, one viral thread at a time.
+            Building with vibes and velocity.
           </p>
         </div>
         

@@ -30,65 +30,50 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="section-heading section-title text-center mb-8">Skills & Roles</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-          My multi-disciplinary background spans technical writing, community building, and growth strategy—allowing me to bridge 
-          technical complexity with compelling narratives that drive user adoption.
+          I specialize in building apps with AI-first workflows. I guide tools like Claude, Lovable, and Cursor to ship frontend experiences that are fast, responsive, and fun. I still write just now with code and components.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <SkillCard 
-            title="Web3 Growth Strategy" 
-            description="Creating data-driven growth plans that align with token economics and community incentives."
-            icon={Rocket}
+            title="Vibe Coding"
+            description="AI-powered development using tools like Cursor, Lovable, Claude, and Google Jules."
+            icon={Zap}
             delay={100}
           />
           
           <SkillCard 
-            title="Content Writing" 
-            description="Crafting viral threads, educational content, and technical breakdowns that drive engagement."
-            icon={FileText}
+            title="Frontend Engineering"
+            description="React, Tailwind, Supabase, JavaScript, and AI-assisted UI generation."
+            icon={Code}
             delay={200}
           />
           
           <SkillCard 
-            title="Developer Documentation" 
-            description="Translating complex technical concepts into clear, accessible documentation for developers."
-            icon={Code}
+            title="Prompt Engineering"
+            description="Using LLMs to generate and refine code, debug logic, and structure web components."
+            icon={MessageSquare}
             delay={300}
           />
           
           <SkillCard 
-            title="Community Management" 
-            description="Building, nurturing, and scaling engaged Web3 communities through strategic content and events."
+            title="Product UI/UX Design"
+            description="Focus on speed, simplicity, mobile-first design, and intuitive interactions."
             icon={Users}
             delay={400}
           />
           
           <SkillCard 
-            title="GTM Execution" 
-            description="Implementing go-to-market strategies with measurable KPIs and conversion-focused content."
-            icon={Briefcase}
+            title="Technical Writing & Docs"
+            description="Still sharp with documentation, readme files, API references, and onboarding tutorials."
+            icon={FileText}
             delay={500}
           />
           
           <SkillCard 
-            title="Airdrop Campaign Strategy" 
-            description="Designing token distribution strategies that balance growth, engagement, and fair economics."
-            icon={Award}
+            title="Legacy Skills That Still Serve"
+            description="Community management, growth strategy, storytelling—now infused into the product design process."
+            icon={Briefcase}
             delay={600}
-          />
-          
-          <SkillCard 
-            title="Copywriting & Scripting" 
-            description="Writing compelling copy for websites, whitepapers, grant proposals, pitchdecks, and product launches."
-            icon={MessageSquare}
-            delay={700}
-          />
-          
-          <SkillCard 
-            title="Technical Storytelling" 
-            description="Weaving technical innovations into compelling narratives that resonate with crypto audiences."
-            icon={Zap}
-            delay={800}
           />
         </div>
       </div>

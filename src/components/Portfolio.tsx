@@ -285,56 +285,54 @@ const Portfolio = () => {
           </TabsContent>
 
           <TabsContent value="tools" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <PortfolioItem
-                title="OptimumStar"
-                description="A gamified quiz platform built specifically for the Optimum community. It features educational content about Optimum's RLNC technology in an interactive, fun format with leaderboards to boost community engagement and understanding."
-                link="https://optimumstar.quest/"
-                metrics={[
-                  {label: "User Engagement", value: "High"},
-                  {label: "Educational Impact", value: "95%"},
-                  {label: "Community Reach", value: "700+"}
+                title="Learnable AI"
+                description="A next-gen study app for Nigerian universities, built with AI-first workflows using Cursor, Supabase, Claude, and Lovable. Learnable lets students take quizzes, calculate CGPA, and prep for exams with clean UX and performance-first builds."
+                link="https://learnable.fun"
+                tags={["React", "Supabase", "Tailwind", "Cursor AI", "Lovable", "Google Jules"]}
+                features={[
+                  "AI intergration",
+                  "Multi-university quiz system",
+                  "User Analytics",
+                  "Quiz Competition Engine",
+                  "Custom Referral Engine",
+                  "Custom blog CMS",
+                  "Custom Admin dashboard",
+                  "Global leaderboard",
+                  "Smart CGPA calculator & prediction logic",
+                  "Clean mobile-first UI",
                 ]}
-                tags={["Quiz App", "Gamification", "RLNC Technology", "Community Education"]}
                 index={0}
               />
-              
               <PortfolioItem
-                title="SuccinctStar Club"
-                description="A gamified quiz app built from scratch featuring leveled questions drawn from the Succinct whitepaper. Includes a leaderboard ranking players to boost community engagement and educate members about Succinct technology."
-                link="http://succinctstar.club/"
-                metrics={[
-                  {label: "User Engagement", value: "High"},
-                  {label: "Educational Impact", value: "90%"},
-                  {label: "Community Reach", value: "500+"}
+                title="CodeBox"
+                description="A polished, high-speed developer toolkit made with AI-assisted development and design. Built as a utility playground for devs, it offers export-ready tools and blazing-fast UI."
+                link="https://codebox.help"
+                tags={["Supabase", "React", "Tailwind", "Cursor", "Lovable"]}
+                features={[
+                  "OG Image Generator",
+                  "Visual Workspace Generator",
+                  "README + Docs Generator",
+                  "Commit Message Assistant",
+                  "Folder & Scaffold Generator",
+                  "Meta Tags, Favicon, Changelog, Markdown-to-PDF",
+                  "More..",
                 ]}
-                tags={["Quiz App", "Gamification", "ZK Technology", "Community Education"]}
                 index={1}
               />
-              
               <PortfolioItem
-                title="Layer0Dapps"
-                description="A lightweight website showcasing applications built on the LayerZero tech stack. This resource was instrumental to the LayerZero community before they had an official ecosystem page, helping users discover and access LayerZero apps from one place."
-                link="https://layer0dapps.spread.name/"
-                metrics={[
-                  {label: "Apps Indexed", value: "45+"},
-                  {label: "Monthly Visits", value: "1.2K+"},
-                  {label: "Community Value", value: "Essential"}
-                ]}
-                tags={["Resource Directory", "LayerZero Ecosystem", "Community Tool"]}
+                title="StreetQuest"
+                description="A GeoGuessr-style guessing game powered by Lovable’s AI frontend tools. Built for fun and experimentation with image maps, time tracking, and scoring."
+                link="https://streetquest.lovable.app/"
+                tags={["Lovable", "AI Frontend", "Gamification"]}
                 index={2}
               />
-              
               <PortfolioItem
-                title="Ultra Gigabrain Yield Farming Strategy"
-                description="Designed an advanced yield farming strategy across multiple Solana lending markets including Kamino and MarginFi. Features fund looping across markets with efficient leverage optimization and interactive, clickable strategies on an implementation mind map."
-                link="https://www.canva.com/design/DAF1JuTQPLQ/Y4LZ_NkLu0TjP3qgV9ytHQ/view?utm_content=DAF1JuTQPLQ&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                metrics={[
-                  {label: "APY Potential", value: "15-25%"},
-                  {label: "Risk Level", value: "Moderate"},
-                  {label: "Implementation", value: "Step-by-step"}
-                ]}
-                tags={["DeFi Strategy", "Solana", "Yield Farming", "Fund Looping"]}
+                title="0xNotes"
+                description="A fun daily death stat visualizer and anonymous note journaling tool. Built with Lovable, and ideal for experimenting with JSON storage and simple UI prototyping."
+                link="https://0xnotes.lol"
+                tags={["Lovable", "JSON", "UI Prototyping"]}
                 index={3}
               />
             </div>

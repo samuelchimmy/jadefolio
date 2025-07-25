@@ -55,8 +55,7 @@ const Contact = () => {
           
           <div className="flex-1 pt-4 md:pt-12">
             <p className="text-muted-foreground mb-6">
-              Ready to level up your content strategy and drive real growth?
-              Let's discuss how I can help you create viral content that converts.
+              Got a product idea and want to ship it fast with AI? Let’s turn your concept into a live, responsive web app with vibes and velocity.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4">

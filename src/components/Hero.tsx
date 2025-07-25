@@ -19,11 +19,11 @@ const Hero = () => {
               AI-Native Full-Stack Developer | Vibe Coder
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            I build beautiful, fast, interactive web apps by prompting AI like a creative partner.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 animate-fade-in">
+            I build <span className="text-gradient">beautiful, fast, interactive</span> web apps
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl">
-            From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel. I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

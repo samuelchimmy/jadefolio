@@ -18,16 +18,14 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between text-center pt-24 pb-12">
-        {/* Top Content */}
-        <div className="w-full flex justify-center">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center pt-24 pb-12">
+        <div className="absolute top-24 w-full flex justify-center">
           <div className="inline-block text-xs text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>
         </div>
 
-        {/* Bottom Content */}
-        <div className="w-full flex flex-col items-center justify-center mt-auto">
+        <div className="w-full flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in" style={{ animationDelay: '0.4s' }}>
             I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
           </h1>

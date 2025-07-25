@@ -335,20 +335,6 @@ const Portfolio = () => {
                 tags={["Lovable", "JSON", "UI Prototyping"]}
                 index={3}
               />
-              <PortfolioItem
-                title="OptimumQuest"
-                description="A fun, interactive quiz app that simplifies the Optimum whitepaper into a gamified learning experience. It helps users understand concepts like zk-fault proofs, optimistic execution, modular rollups, and the verifier marketplace by turning technical jargon into engaging questions, humor, and story-driven challenges. We built it by studying the Optimum protocol in-depth, rewriting it in plain English, then structuring it into progressive quizzes. The frontend was generated with Lovable, while AI tools helped us design questions and explanations. We used Supabase to manage quiz logic, user scores, and feedback."
-                link="https://optimumstar.quest/"
-                tags={["React", "TailwindCSS", "Lovable", "ChatGPT", "Claude AI", "Supabase"]}
-                index={4}
-              />
-              <PortfolioItem
-                title="SuccinctStar"
-                description="A quiz-powered explainer app designed to break down Succinct’s zk-proof infrastructure and aggregation layers into bite-sized, engaging content. Users learn how proof systems, provers, and verifiers work through jokes, comparisons, and interactive questions. We started by simplifying the Succinct whitepaper, then used AI to generate quiz content and educational metaphors. The app flow was built for maximum clarity and retention, with backend logic managed in Supabase and UI generated via Lovable."
-                link="http://succinctstar.club/"
-                tags={["React", "TailwindCSS", "Lovable", "ChatGPT", "Claude AI", "Supabase"]}
-                index={5}
-              />
             </div>
           </TabsContent>
         </Tabs>

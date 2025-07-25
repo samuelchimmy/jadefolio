@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Spline from '@splinetool/react-spline';
 import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
@@ -11,18 +12,22 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center px-6">
-      <div className="max-w-6xl w-full mx-auto grid grid-cols-1 gap-12 items-center">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+      <div className="absolute top-0 right-0 w-full h-full z-0 pointer-events-none">
+        <Spline scene="https://prod.spline.design/E1VcB6m5N0mydlaW/scene.splinecode" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="animate-fade-in">
           <div className="mb-4">
             <div className="inline-block text-sm text-muted-foreground border border-terminal-green/30 px-3 py-1 rounded-full animate-pulse-glow">
               AI-Native Full-Stack Developer | Vibe Coder
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 animate-fade-in">
             I build <span className="text-gradient">beautiful, fast, interactive</span> web apps
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
@@ -43,7 +48,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <button 
           onClick={() => scrollToSection('about')} 
           className="text-terminal-green transition-all duration-300 hover:text-terminal-blue"

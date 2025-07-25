@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Centered Content Container */}
       <div className="relative z-10 flex flex-col items-center text-center">
         {/* Content Above Robot */}
-        <div className="mb-12">
+        <div className="mb-20">
           <div className="inline-block text-xs text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow mb-4" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>
@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="h-32"></div>
 
         {/* Content Below Robot */}
-        <div className="mt-12">
+        <div className="mt-24">
           <p className="text-sm text-muted-foreground max-w-lg mx-auto mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>

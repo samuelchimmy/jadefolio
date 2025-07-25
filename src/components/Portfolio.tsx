@@ -24,13 +24,13 @@ const Portfolio = () => {
           that have driven significant engagement and adoption across the Web3 ecosystem.
         </p>
 
-        <Tabs defaultValue="growth" className="w-full">
+        <Tabs defaultValue="projects" className="w-full">
           <TabsList className="grid w-full grid-cols-5 mb-12">
+            <TabsTrigger value="projects" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Projects Built</TabsTrigger>
             <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Growth Campaigns</TabsTrigger>
             <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Community Building</TabsTrigger>
             <TabsTrigger value="blog" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Blog & Thought Leadership</TabsTrigger>
             <TabsTrigger value="copywriting" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Copywriting</TabsTrigger>
-            <TabsTrigger value="tools" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Tools Built</TabsTrigger>
           </TabsList>
 
           <TabsContent value="growth" className="space-y-8">
@@ -284,7 +284,7 @@ const Portfolio = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="tools" className="space-y-8">
+          <TabsContent value="projects" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <PortfolioItem
                 title="Learnable AI"

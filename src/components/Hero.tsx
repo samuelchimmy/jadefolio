@@ -18,16 +18,21 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-end text-center pb-16">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between text-center">
         <div className="w-full flex justify-center pt-8">
-          <div className="inline-block text-xs text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
+          <div className="inline-block text-sm text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>
         </div>
-        <div className="w-full flex flex-col items-center justify-center mt-4">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
+        <div className="w-full flex justify-between items-center h-full absolute">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in -translate-x-1/4" style={{ animationDelay: '0.4s' }}>
+            I build beautiful,
           </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in translate-x-1/4" style={{ animationDelay: '0.4s' }}>
+            <span className="text-gradient">fast, interactive</span> web apps
+          </h1>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center pb-8">
           <p className="text-sm text-muted-foreground max-w-lg mx-auto mt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>

@@ -34,7 +34,7 @@ export default {
           foreground: "hsl(var(--secondary-foreground))"
         },
         terminal: {
-          green: "#8A2BE2",
+          green: "#4AF626",
           blue: "#61DAFB",
         },
         "brand-purple": "#8A2BE2",

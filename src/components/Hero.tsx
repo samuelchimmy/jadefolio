@@ -34,12 +34,12 @@ const Hero = () => {
         <div className="h-32"></div>
 
         {/* Content Below Robot */}
-        <div className="mt-24">
-          <p className="text-sm text-muted-foreground max-w-lg mx-auto mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-32">
+          <p className="text-sm text-muted-foreground max-w-lg mx-auto mb-6 animate-fade-in text-center" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
-          <div className="flex gap-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="flex gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
             <button
               onClick={() => scrollToSection('contact')}
               className="px-6 py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30"

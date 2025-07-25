@@ -18,29 +18,38 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
-        <div className="inline-block text-sm text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow mb-4" style={{ animationDelay: '0.2s' }}>
-          AI-Native Full-Stack Developer | Vibe Coder
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between text-center">
+        <div className="w-full flex justify-center pt-8">
+          <div className="inline-block text-sm text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
+            AI-Native Full-Stack Developer | Vibe Coder
+          </div>
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          I build <span className="text-gradient">beautiful, fast, interactive</span> web apps
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
-        </p>
-        <div className="flex gap-4 mt-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="px-6 py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30"
-          >
-            Work With Me
-          </button>
-          <button
-            onClick={() => scrollToSection('portfolio')}
-            className="px-6 py-3 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10"
-          >
-            Explore My Work
-          </button>
+        <div className="w-full flex justify-between items-center h-full absolute">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in -translate-x-1/4" style={{ animationDelay: '0.4s' }}>
+            I build beautiful,
+          </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in translate-x-1/4" style={{ animationDelay: '0.4s' }}>
+            <span className="text-gradient">fast, interactive</span> web apps
+          </h1>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center pb-8">
+          <p className="text-sm text-muted-foreground max-w-lg mx-auto mt-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
+          </p>
+          <div className="flex gap-4 mt-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-6 py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30"
+            >
+              Work With Me
+            </button>
+            <button
+              onClick={() => scrollToSection('portfolio')}
+              className="px-6 py-3 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10"
+            >
+              Explore My Work
+            </button>
+          </div>
         </div>
       </div>
       

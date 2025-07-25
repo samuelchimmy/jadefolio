@@ -33,9 +33,11 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))"
         },
-        terminal: {
-          green: "#4AF626",
-          blue: "#61DAFB",
+        brand: {
+          blue: "#00BFFF",
+          purple: "#8A2BE2",
+          magenta: "#FF00FF",
+          pink: "#FF69B4",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -98,12 +100,12 @@ export default {
           "0%": { transform: "translateX(0)", opacity: "1" },
           "100%": { transform: "translateX(20px)", opacity: "0" }
         },
-        "pulse-glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 5px 0px rgba(74, 246, 38, 0.3)",
+        "pulse-glow-purple": {
+          "0%, 100%": {
+            boxShadow: "0 0 15px 5px rgba(138, 43, 226, 0.4), 0 0 5px 2px rgba(255, 0, 255, 0.3)",
           },
-          "50%": { 
-            boxShadow: "0 0 15px 5px rgba(74, 246, 38, 0.6)",
+          "50%": {
+            boxShadow: "0 0 30px 10px rgba(138, 43, 226, 0.7), 0 0 15px 5px rgba(255, 0, 255, 0.5)",
           },
         },
       },
@@ -114,7 +116,7 @@ export default {
         "fade-out": "fade-out 0.5s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
         "slide-out": "slide-out 0.5s ease-out",
-        "pulse-glow": "pulse-glow 2s infinite",
+        "pulse-glow-purple": "pulse-glow-purple 3s infinite ease-in-out",
       }
     }
   },

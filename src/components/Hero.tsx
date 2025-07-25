@@ -12,50 +12,62 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 -z-10"></div>
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+      <div className="absolute inset-0 z-0">
+        <Spline scene="https://prod.spline.design/E1VcB6m5N0mydlaW/scene.splinecode" />
+      </div>
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="animate-fade-in text-center md:text-left">
-          <div className="mb-4">
-            <div className="inline-block text-sm text-muted-foreground border border-terminal-green/30 px-3 py-1 rounded-full animate-pulse-glow">
-              AI-Native Full-Stack Developer | Vibe Coder
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 animate-fade-in">
-            I build <span className="text-gradient">beautiful, fast, interactive</span> web apps
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        <div className="absolute top-1/4 left-10 md:left-20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            I build <span className="text-brand-magenta">beautiful</span>,
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="px-6 py-3 rounded-md bg-terminal-green text-background font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/30"
-            >
-              Work With Me
-            </button>
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="px-6 py-3 rounded-md bg-transparent border border-terminal-green/50 text-terminal-green transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/20 hover:bg-terminal-green/10"
-            >
-              Explore My Work
-            </button>
+        </div>
+
+        <div className="absolute top-1/3 right-10 md:right-20 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-right">
+            <span className="text-brand-blue">fast</span>, interactive
+          </h1>
+        </div>
+
+        <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+           <h1 className="text-4xl md:text-5xl font-bold text-white">
+            web <span className="text-brand-purple">apps</span>
+          </h1>
+        </div>
+
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+          <div className="inline-block text-sm text-gray-300 border border-brand-purple/50 px-3 py-1 rounded-full animate-pulse-glow-purple">
+            AI-Native Full-Stack Developer | Vibe Coder
           </div>
         </div>
-        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] animate-fade-in" style={{ animationDelay: '0.7s' }}>
-          <Spline
-            scene="https://prod.spline.design/E1VcB6m5N0mydlaW/scene.splinecode"
-            className="w-full h-full spline-container"
-          />
+
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-3/4 md:w-1/2 text-center animate-fade-in" style={{ animationDelay: '1s' }}>
+          <p className="text-md text-gray-400">
+            By prompting AI like a creative partner. I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
+          </p>
+        </div>
+
+        <div className="absolute bottom-20 flex gap-4 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="px-6 py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-magenta/50"
+          >
+            Work With Me
+          </button>
+          <button
+            onClick={() => scrollToSection('portfolio')}
+            className="px-6 py-3 rounded-md bg-transparent border border-brand-blue/80 text-brand-blue transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-blue/30 hover:bg-brand-blue/10"
+          >
+            Explore My Work
+          </button>
         </div>
       </div>
-      
+
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <button 
           onClick={() => scrollToSection('about')} 
-          className="text-terminal-green transition-all duration-300 hover:text-terminal-blue"
+          className="text-brand-pink transition-all duration-300 hover:text-white"
           aria-label="Scroll down"
         >
           <ChevronDown size={32} />

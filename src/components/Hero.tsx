@@ -31,10 +31,10 @@ const Hero = () => {
         </div>
 
         {/* Space for Robot */}
-        <div className="h-32"></div>
+        <div className="h-48"></div>
 
         {/* Content Below Robot */}
-        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+        <div className="mt-32">
           <p className="text-sm text-muted-foreground max-w-lg mx-auto mb-6 animate-fade-in text-center" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>

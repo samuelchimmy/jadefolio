@@ -25,7 +25,7 @@ const Portfolio = () => {
         </p>
 
         <Tabs defaultValue="projects" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-12">
+          <TabsList className="grid w-full sm:w-auto sm:grid-cols-5 mb-12 overflow-x-auto sm:overflow-x-visible">
             <TabsTrigger value="projects" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Projects Built</TabsTrigger>
             <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Growth Campaigns</TabsTrigger>
             <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Community Building</TabsTrigger>

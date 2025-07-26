@@ -41,7 +41,7 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="section-heading section-title text-center mb-16">About My Journey</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="terminal-container animate-fade-in">
             <div className="flex items-center gap-2 mb-4 border-b border-terminal-green/20 pb-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>

@@ -21,13 +21,18 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center text-center px-4 pt-16 md:pt-0">
         {/* Content Above Robot */}
         <div className="mb-8 md:mb-16 space-y-4">
-          <div className="inline-block text-[10px] xs:text-xs sm:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
-            <span className="block xs:inline">AI-Native Full-Stack Developer</span>
-            <span className="hidden xs:inline mx-1">|</span>
-            <span className="block xs:inline">Vibe Coder</span>
+          <div className="inline-block text-[10px] xs:text-xs sm:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
+            <span className="inline">AI-Native Full-Stack Developer</span>
+            <span className="mx-1">|</span>
+            <span className="inline">Vibe Coder</span>
           </div>
           
-          <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in leading-tight px-2" style={{ animationDelay: '0.4s' }}>
+          {/* Desktop Title */}
+          <h1 className="hidden md:block text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in leading-tight px-2" style={{ animationDelay: '0.4s' }}>
+            I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
+          </h1>
+          {/* Mobile Title */}
+          <h1 className="block md:hidden text-sm font-bold animate-fade-in leading-tight px-2 whitespace-nowrap" style={{ animationDelay: '0.4s' }}>
             I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
           </h1>
         </div>

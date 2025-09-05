@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Menu, X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +22,18 @@ const NavBar = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      if (isMobile) setMobileMenuOpen(false); // Close mobile menu when navigating
     }
   };
+
+  const navItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'portfolio', label: 'Portfolio' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'contact', label: 'Contact' },
+  ];
 
   return (
     <header 
@@ -37,14 +50,7 @@ const NavBar = () => {
         </div>
         
         <ul className="hidden md:flex space-x-8">
-          {[
-            { id: 'home', label: 'Home' },
-            { id: 'about', label: 'About' },
-            { id: 'portfolio', label: 'Portfolio' },
-            { id: 'skills', label: 'Skills' },
-            { id: 'experience', label: 'Experience' },
-            { id: 'contact', label: 'Contact' },
-          ].map((item) => (
+          {navItems.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => scrollToSection(item.id)}
@@ -57,13 +63,47 @@ const NavBar = () => {
           ))}
         </ul>
         
-        <button 
-          onClick={() => scrollToSection('contact')}
-          className="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/20"
-        >
-          Work With Me
-        </button>
+        <div className="flex items-center gap-4">
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="hidden md:flex px-5 py-2 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/20"
+          >
+            Work With Me
+          </button>
+          
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-muted-foreground hover:text-terminal-green transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-muted animate-fade-in">
+          <div className="flex flex-col p-6 space-y-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-left text-muted-foreground hover:text-terminal-green transition-colors py-2 text-lg"
+              >
+                {item.label}
+              </button>
+            ))}
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="mt-4 px-5 py-3 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 text-center"
+            >
+              Work With Me
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

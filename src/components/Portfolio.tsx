@@ -25,12 +25,12 @@ const Portfolio = () => {
         </p>
 
         <Tabs defaultValue="projects" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-12">
-            <TabsTrigger value="projects" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Projects Built</TabsTrigger>
-            <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Growth Campaigns</TabsTrigger>
-            <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Community Building</TabsTrigger>
-            <TabsTrigger value="blog" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Blog & Thought Leadership</TabsTrigger>
-            <TabsTrigger value="copywriting" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all">Copywriting</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-12 h-auto">
+            <TabsTrigger value="projects" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all text-xs md:text-sm p-2 md:p-3">Projects Built</TabsTrigger>
+            <TabsTrigger value="growth" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all text-xs md:text-sm p-2 md:p-3">Growth Campaigns</TabsTrigger>
+            <TabsTrigger value="community" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all text-xs md:text-sm p-2 md:p-3">Community Building</TabsTrigger>
+            <TabsTrigger value="blog" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all text-xs md:text-sm p-2 md:p-3">Blog & Thought Leadership</TabsTrigger>
+            <TabsTrigger value="copywriting" className="data-[state=active]:text-terminal-green data-[state=active]:border-b-2 data-[state=active]:border-terminal-green transition-all text-xs md:text-sm p-2 md:p-3">Copywriting</TabsTrigger>
           </TabsList>
 
           <TabsContent value="growth" className="space-y-8">

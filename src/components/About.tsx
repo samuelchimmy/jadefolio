@@ -17,22 +17,21 @@ const TimelineItem = ({
   icon: React.ComponentType<{ className?: string }>;
   delay?: number;
 }) => (
-  <div 
-    className="flex gap-4 items-start animate-fade-in" 
-    style={{ animationDelay: `${delay}ms` }}
-  >
-    <div className="flex-shrink-0 w-16 text-right font-mono text-terminal-green">{year}</div>
-    <div className="h-full flex flex-col items-center mr-4">
-      <div className="w-12 h-12 rounded-full flex items-center justify-center bg-muted border border-terminal-green/30 animate-pulse-glow">
-        <Icon className="w-6 h-6 text-terminal-green" />
+    <div className="flex flex-col sm:flex-row gap-4 items-start animate-fade-in" 
+         style={{ animationDelay: `${delay}ms` }}
+    >
+      <div className="flex-shrink-0 w-12 sm:w-16 text-left sm:text-right font-mono text-terminal-green text-sm">{year}</div>
+      <div className="h-full flex flex-col items-center mr-4">
+        <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-muted border border-terminal-green/30 animate-pulse-glow">
+          <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-terminal-green" />
+        </div>
+        <div className="flex-grow w-0.5 bg-gradient-to-b from-terminal-green/50 to-transparent mt-2"></div>
       </div>
-      <div className="flex-grow w-0.5 bg-gradient-to-b from-terminal-green/50 to-transparent mt-2"></div>
+      <div className="flex-1 pb-6 sm:pb-10">
+        <h3 className="text-lg sm:text-xl font-bold mb-2 text-terminal-green">{title}</h3>
+        <p className="text-muted-foreground text-sm sm:text-base">{description}</p>
+      </div>
     </div>
-    <div className="flex-1 pb-10">
-      <h3 className="text-xl font-bold mb-2 text-terminal-green">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
-  </div>
 );
 
 const About = () => {
@@ -67,7 +66,7 @@ const About = () => {
           </div>
           
           <div>
-            <div className="pl-10">
+            <div className="pl-4 md:pl-10">
               <TimelineItem 
                 year="2021" 
                 title="Entered Web3" 

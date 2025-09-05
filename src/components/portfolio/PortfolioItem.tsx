@@ -10,9 +10,10 @@ interface PortfolioItemProps {
   metrics?: Array<{label: string; value: string}>; 
   index?: number;
   tags?: string[];
+  features?: string[];
 }
 
-const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index = 0, tags = [] }: PortfolioItemProps) => (
+const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index = 0, tags = [], features = [] }: PortfolioItemProps) => (
   <Card className="overflow-hidden transition-all duration-300 group animate-fade-in border border-muted bg-card/50 backdrop-blur-sm hover:border-terminal-green/50" style={{ animationDelay: `${index * 150}ms` }}>
     <CardContent className="p-6">
       {imageUrl && (
@@ -37,6 +38,20 @@ const PortfolioItem = ({ title, description, imageUrl, link, metrics = [], index
         </div>
       )}
       
+      {features.length > 0 && (
+        <div className="mb-4">
+          <h4 className="text-sm font-semibold mb-2 text-terminal-green">Key Features:</h4>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 text-sm text-muted-foreground">
+            {features.map((feature, i) => (
+              <li key={i} className="flex items-start">
+                <span className="text-terminal-green mr-2">•</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {metrics.length > 0 && (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4">
           {metrics.map((metric, i) => (

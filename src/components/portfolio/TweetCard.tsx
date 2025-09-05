@@ -115,14 +115,14 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       <div className="p-6">
-        <h3 className="text-2xl font-bold mb-4 text-gradient section-title">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-bold mb-4 text-gradient section-title">{title}</h3>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Tweet Embed */}
-          <div className="tweet-card col-span-1">
+          <div className="tweet-card col-span-1 md:col-span-2 lg:col-span-1">
             <div 
               ref={tweetDivRef} 
-              className="bg-card rounded-lg border border-terminal-green/20 h-[400px] flex items-center justify-center overflow-hidden"
+              className="bg-card rounded-lg border border-terminal-green/20 h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden"
             >
               <div className="text-muted-foreground text-sm">Loading tweet...</div>
               <a 
@@ -137,18 +137,18 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
           </div>
           
           {/* Metrics */}
-          <div className="col-span-1">
+          <div className="col-span-1 md:col-span-1 lg:col-span-1">
             <div className="tweet-card h-full flex flex-col">
-              <h4 className="text-xl font-semibold mb-6 flex items-center">
+              <h4 className="text-lg md:text-xl font-semibold mb-4 md:mb-6 flex items-center">
                 <span className="mr-2 text-terminal-green">&gt;</span> Results
               </h4>
               
-              <div className="space-y-6 flex-1">
+              <div className="space-y-4 md:space-y-6 flex-1">
                 {Object.entries(metrics).map(([key, value]) => (
                   <div key={key} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="capitalize text-sm">{key}</span>
-                      <span className="text-terminal-green text-sm">{value}</span>
+                      <span className="capitalize text-xs md:text-sm">{key}</span>
+                      <span className="text-terminal-green text-xs md:text-sm font-medium">{value}</span>
                     </div>
                     <div className="metric-bar">
                       <div 
@@ -165,18 +165,18 @@ const TweetCard = ({ tweetUrl, title, description, metrics, tactics, index }: Tw
           </div>
           
           {/* Analysis */}
-          <div className="col-span-1">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="tweet-card h-full flex flex-col">
-              <h4 className="text-xl font-semibold mb-3 flex items-center">
+              <h4 className="text-lg md:text-xl font-semibold mb-3 flex items-center">
                 <span className="mr-2 text-terminal-green">&gt;</span> Tactics
               </h4>
               
-              <p className="text-muted-foreground mb-4">{description}</p>
+              <p className="text-muted-foreground mb-4 text-sm md:text-base">{description}</p>
               
-              <h5 className="text-sm text-terminal-green mb-2">Tactics Used:</h5>
-              <ul className="list-disc pl-5 text-sm text-muted-foreground">
+              <h5 className="text-xs md:text-sm text-terminal-green mb-2">Tactics Used:</h5>
+              <ul className="list-disc pl-5 text-xs md:text-sm text-muted-foreground space-y-1 md:space-y-2">
                 {tactics.map((tactic, idx) => (
-                  <li key={idx} className="mb-2">{tactic}</li>
+                  <li key={idx} className="leading-relaxed">{tactic}</li>
                 ))}
               </ul>
             </div>

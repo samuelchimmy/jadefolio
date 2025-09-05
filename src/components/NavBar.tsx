@@ -38,12 +38,12 @@ const NavBar = () => {
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12',
-        scrolled ? 'bg-background/80 backdrop-blur-md border-b border-muted' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 sm:py-4 px-4 sm:px-6 md:px-12',
+        scrolled ? 'bg-background/90 backdrop-blur-md border-b border-muted shadow-sm' : 'bg-transparent'
       )}
     >
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        <div className="text-xl font-bold">
+        <div className="text-lg sm:text-xl font-bold">
           <span className="text-terminal-green">Jade</span>
           <span className="text-white">ofWallstreet</span>
           <span className="text-terminal-green">_</span>
@@ -84,20 +84,20 @@ const NavBar = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-muted animate-fade-in">
-          <div className="flex flex-col p-6 space-y-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md border-b border-muted shadow-2xl animate-fade-in z-50">
+          <div className="flex flex-col p-4 space-y-3 max-h-[70vh] overflow-y-auto">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left text-muted-foreground hover:text-terminal-green transition-colors py-2 text-lg"
+                className="text-left text-muted-foreground hover:text-terminal-green transition-colors py-3 px-2 text-base rounded-md hover:bg-muted/30"
               >
                 {item.label}
               </button>
             ))}
             <button 
               onClick={() => scrollToSection('contact')}
-              className="mt-4 px-5 py-3 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 text-center"
+              className="mt-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-terminal-green/20 to-terminal-blue/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 text-center text-sm"
             >
               Work With Me
             </button>

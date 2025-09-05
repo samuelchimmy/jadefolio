@@ -18,37 +18,39 @@ const Hero = () => {
       </div>
 
       {/* Centered Content Container */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-16 md:pt-0">
         {/* Content Above Robot */}
-        <div className="mb-12 md:mb-20">
-          <div className="inline-block text-xs sm:text-sm text-muted-foreground border border-brand-purple/30 px-3 py-1 rounded-full animate-fade-in animate-pulse-glow mb-4" style={{ animationDelay: '0.2s' }}>
-            AI-Native Full-Stack Developer | Vibe Coder
+        <div className="mb-8 md:mb-16 space-y-4">
+          <div className="inline-block text-[10px] xs:text-xs sm:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow" style={{ animationDelay: '0.2s' }}>
+            <span className="block xs:inline">AI-Native Full-Stack Developer</span>
+            <span className="hidden xs:inline mx-1">|</span>
+            <span className="block xs:inline">Vibe Coder</span>
           </div>
           
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in leading-tight" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold animate-fade-in leading-tight px-2" style={{ animationDelay: '0.4s' }}>
             I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
           </h1>
         </div>
 
         {/* Space for Robot */}
-        <div className="h-32 md:h-48"></div>
+        <div className="h-24 sm:h-32 md:h-48"></div>
 
         {/* Content Below Robot */}
-        <div className="mt-16 md:mt-32">
-          <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto mb-6 animate-fade-in text-center px-4" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-8 sm:mt-16 md:mt-32">
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg sm:max-w-xl mx-auto mb-6 animate-fade-in text-center px-4 leading-relaxed" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.8s' }}>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30 text-sm sm:text-base"
+              className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30 text-sm sm:text-base"
             >
               Work With Me
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="px-6 py-3 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10 text-sm sm:text-base"
+              className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10 text-sm sm:text-base"
             >
               Explore My Work
             </button>

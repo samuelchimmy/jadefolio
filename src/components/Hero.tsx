@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
 
       {/* Centered Content Container */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-12 md:pt-0">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-4 md:pt-0">
         {/* Content Above Robot */}
-        <div className="mb-6 md:mb-12 space-y-3">
+        <div className="mb-2 md:mb-6 space-y-2">
           <div className="inline-block text-[9px] xs:text-[10px] sm:text-xs md:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>
@@ -39,16 +39,16 @@ const Hero = () => {
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in px-4" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center animate-fade-in px-4" style={{ animationDelay: '0.8s' }}>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30 text-sm"
+              className="px-3 py-1.5 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30 text-xs sm:text-sm w-fit mx-auto sm:mx-0"
             >
               Work With Me
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10 text-sm"
+              className="px-3 py-1.5 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10 text-xs sm:text-sm w-fit mx-auto sm:mx-0"
             >
               Explore My Work
             </button>

@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
 
       {/* Centered Content Container */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-0 md:pt-0">
-        {/* Content Above Robot */}
-        <div className="mb-1 md:mb-4 space-y-1">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-8 md:pt-16">
+        {/* All Content Above Robot */}
+        <div className="space-y-4 mb-8">
           <div className="inline-block text-[9px] xs:text-[10px] sm:text-xs md:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>
@@ -28,14 +28,8 @@ const Hero = () => {
           <h1 className="text-sm xs:text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl font-bold animate-fade-in leading-tight px-2 whitespace-nowrap" style={{ animationDelay: '0.4s' }}>
             I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
           </h1>
-        </div>
 
-        {/* Space for Robot */}
-        <div className="h-24 sm:h-32 md:h-48"></div>
-
-        {/* Content Below Robot */}
-        <div className="mt-8 sm:mt-16 md:mt-32">
-          <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg sm:max-w-xl mx-auto mb-6 animate-fade-in text-center px-4 leading-relaxed" style={{ animationDelay: '0.6s' }}>
+          <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg sm:max-w-xl mx-auto animate-fade-in text-center px-4 leading-relaxed" style={{ animationDelay: '0.6s' }}>
             By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
           </p>
           
@@ -54,6 +48,9 @@ const Hero = () => {
             </button>
           </div>
         </div>
+
+        {/* Space for Robot - takes remaining space */}
+        <div className="flex-1 min-h-[200px] sm:min-h-[300px] md:min-h-[400px]"></div>
       </div>
       
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">

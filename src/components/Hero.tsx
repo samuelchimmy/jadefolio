@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
 
       {/* Centered Content Container */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-8 md:pt-16">
-        {/* Content Above Robot - Badge and Main Heading Only */}
-        <div className="space-y-2 mb-8">
+      <div className="relative z-10 flex flex-col items-center text-center px-4">
+        {/* Content Above Robot - Badge and Main Heading at Top */}
+        <div className="space-y-2 mb-4 mt-8 md:mt-16">
           <div className="inline-block text-[9px] xs:text-[10px] sm:text-xs md:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
             AI-Native Full-Stack Developer | Vibe Coder
           </div>

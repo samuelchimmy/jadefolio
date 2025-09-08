@@ -1,71 +1,205 @@
-import React from 'react';
-import Spline from '@splinetool/react-spline';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, Mail, Send, Link, Linkedin, MessageSquare, Download, ExternalLink } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const [showPortfolio, setShowPortfolio] = useState(false);
+
+  const handleExploreClick = () => {
+    setShowPortfolio(!showPortfolio);
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Spline scene="https://prod.spline.design/E1VcB6m5N0mydlaW/scene.splinecode" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-      </div>
-
-      {/* Centered Content Container */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 pt-8 md:pt-16">
-        {/* Content Above Robot - Badge and Main Heading Fixed at Top */}
-        <div className="space-y-2 mb-8">
-          <div className="inline-block text-[9px] xs:text-[10px] sm:text-xs md:text-sm text-muted-foreground border border-brand-purple/30 px-2 xs:px-3 py-1 rounded-full animate-fade-in animate-pulse-glow whitespace-nowrap" style={{ animationDelay: '0.2s' }}>
-            AI-Native Full-Stack Developer | Vibe Coder
-          </div>
-          
-          <h1 className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold animate-fade-in leading-tight px-2 whitespace-nowrap" style={{ animationDelay: '0.4s' }}>
-            I build beautiful, <span className="text-gradient">fast, interactive</span> web apps
-          </h1>
-        </div>
-
-        {/* Space for Robot */}
-        <div className="h-32 sm:h-40 md:h-48"></div>
-
-        {/* Content at Robot Base/Body Level */}
-        <div className="space-y-4">
-          <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-lg sm:max-w-xl mx-auto animate-fade-in text-center px-4 leading-relaxed" style={{ animationDelay: '0.6s' }}>
-            By prompting AI like a creative partner. From Claude, ChatGPT, Cursor, Lovable, and Google Jules, to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to ship scalable, user-focused digital products with speed, clarity, and style.
-          </p>
-          
-          <div className="flex flex-row gap-2 sm:gap-3 justify-center animate-fade-in px-4" style={{ animationDelay: '0.8s' }}>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="px-3 py-1.5 rounded-md bg-brand-purple text-white font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-purple/30 text-xs sm:text-sm w-fit"
-            >
-              Work With Me
-            </button>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="px-3 py-1.5 rounded-md bg-transparent border border-brand-pink/50 text-brand-pink transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-pink/20 hover:bg-brand-pink/10 text-xs sm:text-sm w-fit"
-            >
-              Explore My Work
-            </button>
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
+      {/* Main Profile Section */}
+      <div className="flex-1 flex flex-col items-center justify-center px-6 py-8">
+        {/* Profile Image */}
+        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-terminal-green/20 to-terminal-blue/20 border-2 border-terminal-green/30 flex items-center justify-center mb-8 animate-fade-in overflow-hidden">
+          <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-muted/50 flex items-center justify-center">
+            <span className="text-2xl md:text-3xl font-bold text-terminal-green">J</span>
           </div>
         </div>
-      </div>
-      
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <button 
-          onClick={() => scrollToSection('about')} 
-          className="text-brand-purple transition-all duration-300 hover:text-brand-blue"
-          aria-label="Scroll down"
+
+        {/* Main Heading */}
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          Hello! I'm <span className="text-terminal-green">Samuel</span>
+          <br />
+          <span className="text-muted-foreground text-lg md:text-xl lg:text-2xl">Also known as JadeofWallstreet.</span>
+        </h1>
+
+        {/* Role Badge */}
+        <div className="inline-block text-sm text-muted-foreground border border-terminal-green/30 px-4 py-2 rounded-full mb-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          AI-Native Full-Stack Developer | Vibe Coder
+        </div>
+
+        {/* Description */}
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          I'm a <strong>Vibe Coder</strong> and a junior <strong>Software Engineer</strong> with passion for problem-solving, 
+          strong foundation in computer science principles and proven track record of delivering high-quality and 
+          scalable code. By prompting AI like a creative partner—from Claude, ChatGPT, Cursor, Lovable, and Google Jules, 
+          to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to 
+          ship scalable, user-focused digital products with speed, clarity, and style.
+        </p>
+
+        {/* Main CTA Button */}
+        <button
+          onClick={handleExploreClick}
+          className="flex items-center gap-2 px-6 py-3 rounded-md bg-terminal-green/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-terminal-green/20 mb-12 animate-fade-in"
+          style={{ animationDelay: '0.8s' }}
         >
-          <ChevronDown size={32} />
+          {showPortfolio ? 'Hide Details' : 'Explore'} 
+          <ExternalLink size={18} />
         </button>
+
+        {/* Portfolio Quick Links - Shown when Explore is clicked */}
+        {showPortfolio && (
+          <div className="w-full max-w-4xl animate-fade-in space-y-8">
+            {/* Work With Me & Resume Section */}
+            <div className="bg-muted/20 rounded-lg p-6 border border-muted">
+              <h3 className="text-xl font-bold text-terminal-green mb-4">Ready to collaborate?</h3>
+              <p className="text-muted-foreground mb-6">
+                Got a product idea and want to ship it fast with AI? Let's turn your concept into a live, responsive web app with vibes and velocity.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="mailto:EdozieSammy101@gmail.com"
+                  className="flex items-center gap-2 px-4 py-2 rounded-md bg-terminal-green/20 border border-terminal-green/50 text-terminal-green hover:bg-terminal-green/30 transition-all duration-300 text-center justify-center"
+                >
+                  <Mail size={18} />
+                  Work With Me
+                </a>
+                <a 
+                  href="https://flowcv.com/resume/d5baa23saiuu" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-md bg-terminal-blue/20 border border-terminal-blue/50 text-terminal-blue hover:bg-terminal-blue/30 transition-all duration-300 text-center justify-center"
+                >
+                  <Download size={18} />
+                  Download Resume
+                </a>
+              </div>
+            </div>
+
+            {/* Featured Projects */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-muted/20 rounded-lg p-6 border border-muted">
+                <h4 className="text-lg font-bold text-terminal-green mb-2">Learnable AI</h4>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  A next-gen study app for Nigerian universities, built with AI-first workflows. Features quiz systems, CGPA calculation, and exam prep.
+                </p>
+                <a 
+                  href="https://learnable.fun" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-terminal-green hover:text-terminal-blue transition-colors text-sm"
+                >
+                  Visit Site <ExternalLink size={14} />
+                </a>
+              </div>
+              
+              <div className="bg-muted/20 rounded-lg p-6 border border-muted">
+                <h4 className="text-lg font-bold text-terminal-green mb-2">CodeBox</h4>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  A polished, high-speed developer toolkit made with AI-assisted development. Export-ready tools with blazing-fast UI.
+                </p>
+                <a 
+                  href="https://codebox.help" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-terminal-green hover:text-terminal-blue transition-colors text-sm"
+                >
+                  Visit Site <ExternalLink size={14} />
+                </a>
+              </div>
+            </div>
+
+            {/* Skills & Community */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-muted/20 rounded-lg p-6 border border-muted">
+                <h4 className="text-lg font-bold text-terminal-green mb-2">0xfarmer Community</h4>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Founded a thriving Web3 community of 1,000+ members sharing airdrop strategies and DeFi insights.
+                </p>
+                <div className="flex gap-3">
+                  <a 
+                    href="https://t.me/+Ma4xal22__g3OTgx" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-terminal-green hover:text-terminal-blue transition-colors text-sm"
+                  >
+                    Telegram <ExternalLink size={14} />
+                  </a>
+                  <a 
+                    href="https://www.whatsapp.com/channel/0029VaAs0DMH5JLwrAD3wM1U" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-terminal-green hover:text-terminal-blue transition-colors text-sm"
+                  >
+                    WhatsApp <ExternalLink size={14} />
+                  </a>
+                </div>
+              </div>
+              
+              <div className="bg-muted/20 rounded-lg p-6 border border-muted">
+                <h4 className="text-lg font-bold text-terminal-green mb-2">Blog & Writing</h4>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Technical writing and thought leadership on DeFi, Web3, and AI development.
+                </p>
+                <a 
+                  href="https://jadeofwallstreet.hashnode.dev/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-terminal-green hover:text-terminal-blue transition-colors text-sm"
+                >
+                  Read Articles <ExternalLink size={14} />
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
-    </section>
+
+      {/* Social Links Footer */}
+      <div className="py-8 px-6">
+        <div className="flex justify-center space-x-8 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <a 
+            href="https://github.com/samuelchimmy" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-terminal-green transition-colors"
+            aria-label="GitHub"
+          >
+            <Github size={24} />
+          </a>
+          <a 
+            href="https://x.com/MetisCharter" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-terminal-green transition-colors"
+            aria-label="Twitter"
+          >
+            <MessageSquare size={24} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/samuelchimmy1" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-terminal-green transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={24} />
+          </a>
+          <a 
+            href="https://link3.to/jadeofwallstreet" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-terminal-green transition-colors"
+            aria-label="More Links"
+          >
+            <Link size={24} />
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 

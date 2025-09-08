@@ -44,11 +44,7 @@ const Hero = () => {
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed animate-fade-in text-sm sm:text-base px-4" style={{
         animationDelay: '0.6s'
       }}>
-          I'm a <strong>Vibe Coder</strong> and a junior <strong>Software Engineer</strong> with passion for problem-solving, 
-          strong foundation in computer science principles and proven track record of delivering high-quality and 
-          scalable code. By prompting AI like a creative partner—from Claude, ChatGPT, Cursor, Lovable, and Google Jules, 
-          to stacks like Supabase, React, Tailwind, JavaScript, Node.js, Python, and Vercel—I orchestrate AI and code to 
-          ship scalable, user-focused digital products with speed, clarity, and style.
+          I'm a <strong>Software Engineer</strong> with passion for problem-solving, strong foundation in computer science principles and proven track record of delivering high-quality and scalable code.
         </p>
 
         {/* Main CTA Button */}
